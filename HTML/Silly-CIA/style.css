@@ -1,0 +1,23 @@
+h1 {
+    color: darkgreen;
+}
+h1, h2 {
+    font-family: Georgia;
+    text-align: center;
+}
+p {
+    line-height: 25px;
+}
+a {
+    text-decoration: none;
+}
+.also-like {
+    text-transform: uppercase;
+}
+a:hover {
+    text-decoration: underline;
+}
+img {
+    float: left;
+    margin: 20px;
+}

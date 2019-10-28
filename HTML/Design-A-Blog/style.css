@@ -1,0 +1,43 @@
+nav {
+    position: fixed;
+    background-color: rgba(137, 43, 226, 0.459);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+li {
+    position: relative;
+}
+main {
+    position: relative;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50 0 50 0;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+}
+img {
+    height: 100px;
+    padding: 10px;
+    float: left;
+}
+p {
+    display: flex;
+    justify-content: center;
+    /* clear: none; */
+}
+.paragraph {
+    margin-right: 40px;
+    margin-left: 40px;
+}
+.div {
+    display: block;
+}
+.date {
+    font-style: italic;
+}
