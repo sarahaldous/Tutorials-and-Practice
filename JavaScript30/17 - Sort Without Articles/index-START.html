@@ -49,6 +49,7 @@
 const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
 
 function strip(bandName) {
+  //eliminate the articles for sorting purposes only using regex
   return bandName.replace(/^(a |the |an )/i, '').trim();
 }
 
@@ -59,7 +60,7 @@ document.querySelector('#bands').innerHTML =
     .map(band => `<li>${band}</li>`)
     .join('')
 
-console.log(sortedBands)
+// console.log(sortedBands)
 
 //longer-winded way to do the same thing: 
 // const sortedBands = bands.sort(function (a, b) {
