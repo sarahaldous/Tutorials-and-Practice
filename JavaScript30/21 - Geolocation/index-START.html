@@ -67,7 +67,7 @@
       speed.textContent = data.coords.speed
       arrow.style.transform = `rotate(${data.coords.heading}deg)`
     }, (err) => {
-      console.log(err)
+      console.error(err)
       alert('Hey! Allow access for this to work!')
     })
 
