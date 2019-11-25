@@ -42,6 +42,24 @@
 
 <button></button>
 <script>
+  const divs = document.querySelectorAll('div')
+  const button = document.querySelector('button')
+
+  function logText(e) {
+    console.log(this.classList.value)
+    e.stopPropagation() //stop bubbling! i.e. things passing up through nested element levels.
+  }
+
+  divs.forEach(div => div.addEventListener('click', logText, {
+    capture: false,
+    once: true //once it happens once, it unbinds itself so no future clicks on it will be possible. Same as adding div.removeEventListener('click', logText)
+  }))
+
+  button.addEventListener('click', () => {
+    console.log("Click!!!!")
+  }, {
+    once: true//useful in store checkouts where you don't want them to be able to click things more than once
+  })
 
 </script>
 </body>
