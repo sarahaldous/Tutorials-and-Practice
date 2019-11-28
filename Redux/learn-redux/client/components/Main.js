@@ -9,6 +9,7 @@ const Main = React.createClass({
                 <h1 style={{fontFamily: 'Cambria'}}>
                     <Link to="/">Reduxtagram</Link>
                 </h1>
+                {React.cloneElement(this.props.children, this.props)}
             </div>
         )
     }
