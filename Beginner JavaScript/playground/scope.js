@@ -32,7 +32,7 @@ function logDog(dog) {
 
 function go() {
   const dog = 'sunny';
-  logDog('sunny');
+  logDog(dog);
 }
 
 go();

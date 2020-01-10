@@ -14,7 +14,7 @@ people.forEach((person, index) => {
 //   console.log(person.cool)
 //   console.log('DONE!')
 //   console.groupEnd(`${person.name}`)
-debugger;
+
 console.log(person.name)
 });
 // console.table(people)
@@ -75,7 +75,7 @@ button.addEventListener('click', function(e) {
   e.currentTarget.style.fontSize = `${newFontSize}px`;
 });
 
-// A Dad joke fetch
+// A Dad joke fetch - Network Requests
 async function fetchDadJoke() {
   const res = await fetch('https://icanhazdadjoke.com/', {
     headers: {
