@@ -10,6 +10,7 @@
 
 <body>
   <script>
+    /*eslint-disable*/
     // function outer() {
     //   const outerVar = 'Hey I am the outer Var!';
     //   function inner() {
@@ -22,9 +23,11 @@
 
     // const innerFn = outer();
     // innerFn();
+   
+
 
     function createGreeting(greeting = '') {
-      const myGreet = greeting.toUpperCase();
+      const myGreet = greeting.toUpperCase([0]);
       return function (name) {
         return `${myGreet} ${name}`;
       }
@@ -32,6 +35,7 @@
 
     const sayHello = createGreeting('hello');
     const sayHey = createGreeting('hey');
+    const sayHowdy = createGreeting('howdy')
     console.log(sayHello('wes'));
     console.log(sayHello('kait'));
     console.log(sayHey('kait'));
@@ -41,7 +45,7 @@
       let score = 0;
       return function win() {
         score++;
-        return `Your name ${gameName} score is ${score}`;
+        return `Your ${gameName} score is ${score}`;
       }
     }
 
