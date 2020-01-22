@@ -37,14 +37,46 @@
 
 //Classes!!!!!
 
+// const pic = document.querySelector('.nice')
+// pic.classList.add('open')
+// pic.classList.remove('cool')
+// pic.classList.toggle('round')
+// console.log(pic.classList)
+
+// function toggleRound() {
+//     pic.classList.toggle('round')
+// }
+
+// pic.addEventListener('click', toggleRound)
+
 const pic = document.querySelector('.nice')
 pic.classList.add('open')
 pic.classList.remove('cool')
-pic.classList.toggle('round')
-console.log(pic.classList)
 
-function toggleRound() {
-    pic.classList.toggle('round')
-}
+pic.alt = 'Cute Pup'
+pic.alt = "So much cuter than a puppy"
+console.log(pic.alt)
 
-pic.addEventListener('click', toggleRound)
+//this will wait for all images, CSS, etc. on page to be downloaded before running this:
+window.addEventListener('load', function() {
+    console.log(pic.naturalWidth)
+})
+//this will do the same, but just for that picture, not the whole page
+pic.addEventListener('load', function() {
+    console.log(pic.naturalWidth)
+})
+pic.setAttribute('alt', 'REALLY CUTE PUP')
+console.log(pic.getAttribute('alt'))
+
+//setAttribute will work for attributes that don't automatically come with JavaScript, like 'wes-is-cool'. Use 'data-something' instead of just 'something'.
+
+// to acces those data- attributes that you created, console.log(custom.dataset):
+
+const custom = document.querySelector('.custom')
+// console.log(custom.dataset)
+
+
+custom.addEventListener('click', function() {
+    alert(`Welcome, ${custom.dataset.name} ${custom.dataset.last}`)
+})
+console.log(custom.dataset)
