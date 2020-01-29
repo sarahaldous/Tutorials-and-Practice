@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 10px;
-  background: #ffc600;
+  background: #00ff80b6;
 }
 
 *, *:before, *:after {
@@ -26,7 +26,9 @@ h1 {
   padding: 0 3rem;
   line-height: 1;
   border-radius: 1rem;
+  display: inline;
 }
+
 
 .game {
   width: 600px;
@@ -66,4 +68,20 @@ h1 {
 
 .hole.up .mole {
   top: 0;
+}
+button {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  background-color: rgb(240, 240, 182);
+  height: 3em;
+  width: 4em;
+  margin-top: 2%;
+
+}
+.buttonDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+ 
 }

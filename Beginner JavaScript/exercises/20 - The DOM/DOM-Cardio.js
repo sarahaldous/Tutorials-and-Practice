@@ -1,3 +1,56 @@
+
+/*eslint-disable*/
+// Make a div
+
+const myDiv = document.createElement("div")
+// add a class of wrapper to it
+myDiv.classList.add('wrapper')
+// put it into the body
+document.body.appendChild(myDiv)
+console.log(myDiv)
+// make an unordered list
+const uList = document.createElement("ul")
+// add three list items with the words "one, two three" in them
+const li = document.createElement("li")
+li.textContent = "two"
+document.body.insertAdjacentElement("afterbegin", uList)
+uList.appendChild(li)
+
+const li1 = document.createElement('li')
+li1.textContent = "one"
+uList.insertAdjacentElement('afterbegin', li1)
+
+const li3 = document.createElement('li')
+li3.textContent = "three"
+uList.insertAdjacentElement('beforeend', li3)
+
+// put that list into the above wrapper
+myDiv.appendChild(uList)
+// create an image
+const myImg = document.createElement('img')
+// set the source to an image
+myImg.src = "https://picsum.photos/200"
+// set the width to 250
+myImg.width = 250
+// add a class of cute
+myImg.classList = "cute"
+// add an alt of Cute Puppy
+myImg.alt = "Cute Puppy"
+// Append that image to the wrapper
+document.body.appendChild(myImg)
+
+// with HTML string, make a div, with two paragraphs inside of it
+const myHTML = `
+    <div class="snitch">
+        <p>tacos</p>
+        <p>enchiladas</p>
+    </div>
+`
+// const myNewDiv = document.createRange.createContextualFragment(myHTML)
+// put this div before the unordered list from above
+uList.insertAdjacentElement("beforebegin", myHTML)
+document.body.appendChild()
+
 // Make a div
 
 // add a class of wrapper to it
@@ -19,6 +72,7 @@
 
 // with HTML string, make a div, with two paragraphs inside of it
 // put this div before the unordered list from above
+
 
 // add a class to the second paragraph called warning
 // remove the first paragraph
