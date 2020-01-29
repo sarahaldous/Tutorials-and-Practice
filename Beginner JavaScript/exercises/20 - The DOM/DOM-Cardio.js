@@ -1,14 +1,27 @@
+/*eslint-disable*/
 // Make a div
 
+const myDiv = document.createElement("div")
 // add a class of wrapper to it
-
+myDiv.classList.add('wrapper')
 // put it into the body
-
+document.body.appendChild(myDiv)
+console.log(myDiv)
 // make an unordered list
-
+const uList = document.createElement("ul")
 // add three list items with the words "one, two three" in them
-// put that list into the above wrapper
+const li = document.createElement("li")
+li.textContent = "two"
+document.body.insertAdjacentElement("afterbegin", uList)
+uList.appendChild(li)
 
+const li1 = document.createElement('li')
+li1.textContent = "one"
+// document.body.insertAdjacentElement('beforebegin', li)
+uList.append(li1)
+
+// put that list into the above wrapper
+myDiv.appendChild(uList)
 // create an image
 
 // set the source to an image
