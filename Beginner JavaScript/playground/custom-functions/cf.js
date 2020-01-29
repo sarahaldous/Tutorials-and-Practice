@@ -1,3 +1,4 @@
+
 /* eslint-disable no-console */
 // Function Definition
 
@@ -19,10 +20,12 @@ function calculateBill(billAmount, taxRate = 0.13, tipRate = 0.15) {
 // console.log(`Your total is $${myTotal}`)
 // console.log(`Your total is $${calculateBill()}`);
 
+
 // const myTotal = calculateBill(wesTotal, wesTaxRate);
 
 // Function Definition
 function sayHiTo(firstName) {
+
         return `Hello, ${firstName}`;
 }
 // firstName = "Wanda"
@@ -39,5 +42,6 @@ function yell(name = "Silly Goose") {
 // yell(doctorize('sarah'));
 
 //to make the second argument use the default, input "undefined"
+
 const myBill4 = calculateBill(100, undefined, 0.2);
 console.log(myBill4);

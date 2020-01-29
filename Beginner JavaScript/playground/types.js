@@ -1,3 +1,4 @@
+
 // // eslint-disable-next-line no-console
 // console.log('it works??!!');
 
@@ -41,6 +42,7 @@
 
 // const a = 10;
 // const b = 20;
+
 // // /*
 // const smarties = 21;
 // const kids = 3;
@@ -83,10 +85,12 @@
 
 // */
 
+
 let isDrawing = false;
 let age = 18;
 const ofAge = age > 19;
 console.log(ofAge);
+
 
 // age = 100;
 // let age2 = 100;
