@@ -7,7 +7,7 @@ const myDiv = document.createElement("div")
 myDiv.classList.add('wrapper')
 // put it into the body
 document.body.appendChild(myDiv)
-console.log(myDiv)
+
 // make an unordered list
 const uList = document.createElement("ul")
 // add three list items with the words "one, two three" in them
@@ -37,7 +37,7 @@ myImg.classList = "cute"
 // add an alt of Cute Puppy
 myImg.alt = "Cute Puppy"
 // Append that image to the wrapper
-document.body.appendChild(myImg)
+myDiv.appendChild(myImg)
 
 // with HTML string, make a div, with two paragraphs inside of it
 const myHTML = `
@@ -46,36 +46,19 @@ const myHTML = `
         <p>enchiladas</p>
     </div>
 `
-// const myNewDiv = document.createRange.createContextualFragment(myHTML)
+
 // put this div before the unordered list from above
-uList.insertAdjacentElement("beforebegin", myHTML)
-document.body.appendChild()
-
-// Make a div
-
-// add a class of wrapper to it
-
-// put it into the body
-
-// make an unordered list
-
-// add three list items with the words "one, two three" in them
-// put that list into the above wrapper
-
-// create an image
-
-// set the source to an image
-// set the width to 250
-// add a class of cute
-// add an alt of Cute Puppy
-// Append that image to the wrapper
-
-// with HTML string, make a div, with two paragraphs inside of it
-// put this div before the unordered list from above
-
+uList.insertAdjacentHTML('beforebegin', myHTML)
 
 // add a class to the second paragraph called warning
+const snitch = myDiv.querySelector('.snitch')
+snitch.children[1].classList.add('warning')
+// p.classList('warning')
 // remove the first paragraph
+snitch.firstElementChild.remove()
+
+//Resume at 9:47
+
 
 // create a function called generatePlayerCard that takes in three arguments: name, age, and height
 
