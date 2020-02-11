@@ -47,3 +47,32 @@ function helloWorld(num) {
 		return num
 	}
 }
+
+//Write a function that takes the last number of a consecutive list of numbers and returns the total of all numbers up to and including it.
+
+// Examples
+// addUpTo(3) ➞ 6
+// // 1 + 2 + 3 = 6
+
+// addUpTo(10) ➞ 55
+// // 1 + 2 + 3 + ... + 10 = 55
+
+// addUpTo(7) ➞ 28
+// // 1 + 2 + 3 + ... + 7 = 28
+function addUpTo(n) {
+	return (n) * (n + 1) / 2
+}
+
+//A for loop solution:
+function addUpTo(n) {
+	let sum = 0
+	for(let i=0; i<=n; i++){
+		sum += i
+	}
+	return sum
+}
+
+//Use the variable name rest in order to assign it an object containing the rest of the object properties. 
+
+const user = { name: "John", email: "john@example.com",city: "Phoenix", state: "AZ", country: "USA"}
+const str = `({ name, email, ...rest} = user ).toString()`
