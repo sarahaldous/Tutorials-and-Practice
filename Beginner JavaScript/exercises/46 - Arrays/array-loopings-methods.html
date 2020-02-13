@@ -12,6 +12,7 @@
 
 <body>
   <script>
+    /*eslint-disable*/
     const toppings = ['Mushrooms ', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado', 'Chiles', 'Bacon', 'Pickles', 'Onions', 'Cheese'];
 
     const students = [
@@ -234,15 +235,13 @@
     // Reduce!
     console.clear();
 
-    function tallyNumbers(tally, currentTotal) {
-      console.log(`The current tally is ${tally}`);
-      console.log(`The current total is ${currentTotal}`);
-      console.log('---------');
-      // return the current tally PLUS the amount of this order
-      return tally + currentTotal;
+    function tallyNumbers(tally, currentTotal){
+      console.log(`The current tally is ${tally}`)
+      console.log(`The current total is ${currentTotal}`)
+      console.log('-----------------')
+      //return the current tally PLUS the amount of this order
+      return tally + currentTotal
     }
-
-    const allOrders = orderTotals.reduce(tallyNumbers, 0);
 
     function inventoryReducer(totals, item) {
       console.log(`Looping over ${item.type}`);
