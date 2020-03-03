@@ -38,3 +38,16 @@ signupForm.name.addEventListener('focus', logEvent)
 signupForm.name.addEventListener('blur', logEvent)
 
 signupForm.email.addEventListener('focus', logEvent)
+
+const photo = document.querySelector('.photo')
+
+//once you've added tabindex to html, you still need to do the following to make sure it will allow you to press enter to "click" it once selected with tabs
+function handlePhotoClick(event) {
+    if(event.type === 'click' || event.key === 'Enter')
+    console.log('You clicked the photo')
+    //to get helpful info about keys, use the following or keycode.info
+    // console.log(event.key)
+}
+
+photo.addEventListener('click', handlePhotoClick)
+photo.addEventListener('keyup', handlePhotoClick)
