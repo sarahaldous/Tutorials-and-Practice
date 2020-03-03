@@ -19,47 +19,36 @@ butts.removeEventListener('click', handleClick);
 // Listen on multiple items
 const buyButtons = document.querySelectorAll('button.buy');
 
-console.log(buyButtons)
-
 function handleBuyButtonClick(event) {
-  console.log('You clicked a button!');
   const button = event.target;
-  // console.log(button.textContent);
-  // console.log(parseFloat(event.target.dataset.price));
-  console.log(event.target);
-  console.log(event.currentTarget);
-  console.log(event.target === event.currentTarget);
-  // Stop this event from bubbling up
-  // event.stopPropagation();
+  console.log("you clicked a button!")
+  console.log(button.textContent)
+  console.log('You are buying it!')
+  console.log(parseFloat(event.target.dataset.price))
+  console.log(event.target)
+  console.log(button)
+  // console.log(currentTarget)
+  // console.log(event.target === event.currentTarget)
+  // event.stopPropagation()
 }
-// The buyButton argument refers to each individual item as it's looped over.
+
 buyButtons.forEach(function(buyButton) {
-  console.log('binding the buy button')
-  buyButton.addEventListener('click', handleBuyButtonClick);
-});
+  buyButton.addEventListener('click', handleBuyButtonClick)
+})
 
-//To do this with an arrow function:
-// buyButtons.forEach((button) => {
-//   button.addEventListener('click', () => {
-//     console.log('YOU CLICKED IT')
-//   })
-// })
+window.addEventListener('click', function(event) {
+  console.log('YOU CLICKED THE WINDOW!!!')
+  console.log(event.target)
+  console.log(event.type)
+  console.log(event.bubbles)
+  // event.stopPropagation()
+},
+{capture: true}
+)
 
-window.addEventListener(
-  'click',
-  function(event) {
-    console.log('YOU CLICKED THE WINDOW');
-    console.log(event.target);
-    console.log(event.type);
-    // event.stopPropagation();
-    console.log(event.bubbles);
-  },
-  { capture: true }
-);
+const photoEl = document.querySelector('.photo')
 
-const photoEl = document.querySelector('.photo');
-
-photoEl.addEventListener('mouseenter', e => {
-  console.log(e.currentTarget);
-  console.log(this);
-});
+photoEl.addEventListener('mousemove', function(e) {
+  console.count(e.currentTarget)
+  console.log(this)
+})
