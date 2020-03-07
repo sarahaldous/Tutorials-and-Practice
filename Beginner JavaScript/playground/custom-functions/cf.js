@@ -1,27 +1,32 @@
 
-/* eslint-disable no-console */
+/* eslint-disable */
 // Function Definition
 
 
 function calculateBill(billAmount, taxRate = 0.13, tipRate = 0.15) {
-        // this is the function body
+        // this is the function body/block
         console.log('Running Calculate Bill!!');
         // const total = Math.round(100 * 1.13);
         const total = billAmount + billAmount * taxRate + billAmount * tipRate;
         return total;
-        // this is a temporary variable because it's only ever available inside the function.
+        // Block scoping: this is a temporary variable because it's only ever available inside the function. 
 }
 
 // Function Call. Or **Run**
 // const wesTotal = 500;
 // const wesTaxRate = 0.3;
+
+//To capture the value of something within the block scope, you have to "capture" the value into a variable like this:
 // const myTotal = calculateBill();
 // const myTotal3 = calculateBill(20 + 20 + 40, 0.15)
+
+//Then you can access that information like this:
 // console.log(`Your total is $${myTotal}`)
 // console.log(`Your total is $${calculateBill()}`);
 
 
 // const myTotal = calculateBill(wesTotal, wesTaxRate);
+
 
 // Function Definition
 function sayHiTo(firstName) {
