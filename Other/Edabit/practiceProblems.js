@@ -108,3 +108,11 @@ function addIndexes(arr) {
 // FPS stands for "frames per second" and it's the number of frames a computer screen shows every second.
 // Assume the screen produces 60 frames every second.
 const frames = (minutes, fps) => minutes * fps * 60
+
+// Create a function that takes an array with numbers and return an array with the elements multiplied by two.
+
+function getMultipliedArr(arr) {
+	return arr.map(x => x * 2)
+}
+// OR
+const getMultipliedArr = arr => (arr.map(x => x * 2))
