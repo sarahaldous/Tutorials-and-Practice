@@ -116,3 +116,11 @@ function getMultipliedArr(arr) {
 }
 // OR
 const getMultipliedArr = arr => (arr.map(x => x * 2))
+
+//Return the Remainder from Two Numbers
+const remainder = (x, y) => x % y
+
+//Write the regular expression that reveals the hidden message. You have to remove all of the numbers to reveal the message. Use the character class \D in your expression.
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+// const REGEXP = /\D/g
+
