@@ -21,15 +21,50 @@
   * a variable set to `"hello" - 10` NaN
   * empty string
 
-  <script>
+  <h2>Truthy Values</h2>
+  <h2>Falsey Values</h2>
 
+  <script>
+/*eslint-disable*/
+console.log("Mary Poppins!")
     function slugify(sentence, lowercase) {
       let slug = sentence.replace(/\s/g, '-');
       if (lowercase) {
         return slug.toLowerCase();
       }
+      //else - you don't have to actually write it
       return slug;
+      console.log(sentence)
     }
+
+    const isAwesomeName = 'awesome'.includes(name)
+    if(isAwesomeName) {
+      console.log('SUPER AWESOME NAME')
+    }
+
+    function nameIsAwesome(name) {
+      return 'awesome'.includes(name)
+    }
+
+    if(nameIsAwesome('wes')) {
+      console.log('COOL NAME, WES!')
+    }
+
+    const dog = ''
+
+    if(dog) {
+      console.log('you have a dog')
+    } else {
+      console.log('you don\'t have a dog')
+    }
+
+    let score = 'wes';
+    if(score){
+      console.log('There is a score already')
+    } else {
+      console.log('No score yet')
+    }
+
 
   </script>
 </body>

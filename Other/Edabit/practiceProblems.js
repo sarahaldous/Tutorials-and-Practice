@@ -124,3 +124,5 @@ const remainder = (x, y) => x % y
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 // const REGEXP = /\D/g
 
+// Use ES6 object destructuring to add a default value of 1 to the one variable. Ignore the .toString() function (used for validation).
+const str = `({ one = 1, two } = { two : 2 }).toString()`
