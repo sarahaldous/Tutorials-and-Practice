@@ -126,3 +126,40 @@ const remainder = (x, y) => x % y
 
 // Use ES6 object destructuring to add a default value of 1 to the one variable. Ignore the .toString() function (used for validation).
 const str = `({ one = 1, two } = { two : 2 }).toString()`
+
+//In this challenge, a farmer is asking you to tell him how many legs can be counted among all his animals. The farmer breeds three species:
+
+// chickens = 2 legs
+// cows = 4 legs
+// pigs = 4 legs
+// The farmer has counted his animals and he gives you a subtotal for each species. You have to implement a function that returns the total number of legs of all the animals.
+const animals = (chickens, cows, pigs) => chickens * 2 + (cows + pigs) * 4
+
+//Create a function that takes three numbers as arguments and returns true if it's a triangle and false if not.
+
+const isTriangle = (a, b, c) => (a + b > c && b + c > a && c + a > b) ? true : false
+
+// In this challenge, you must verify the equality of two different given parameters: a and b.
+
+// Both the value and the type of parameters need to be tested in order to have an matching equality. The possible types of the given parameters are:
+
+// Numbers
+// Strings
+// Booleans (false or true)
+// Special values: undefined, null and NaN
+const checkEquality = (a, b) => a === b
+
+//Given a fraction as a string, return whether or not it is greater than 1 when evaluated.
+function greaterThanOne(frac) {
+	const fraction = eval(frac)
+	if (fraction > 1) {
+		return true
+	} else if (fraction === 1) {
+		return false
+	} else {
+		return false
+	}
+}
+// Much shorter solution:
+const greaterThanOne = frac => eval(frac) > 1;
+
