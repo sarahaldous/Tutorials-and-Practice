@@ -169,3 +169,12 @@ const profitableGamble = (prob, prize, pay) => prob * prize > pay
 
 //Create a function that takes an integer and returns true if it's divisible by 100, otherwise return false.
 const divisible = (num) => num % 100 === 0 ? true : false
+
+//Create a function that takes an array of words and transforms it into an array of each word's length.
+function wordLengths(arr) {
+	const newArr = arr.map(x => x.length)
+	return newArr
+}
+//or
+const wordLengths = arr => arr.map(x => x.length)
+
