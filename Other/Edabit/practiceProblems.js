@@ -166,3 +166,6 @@ const greaterThanOne = frac => eval(frac) > 1;
 
 // Create a function that takes in three arguments (prob, prize, pay) and returns true if prob * prize > pay; otherwise return false.
 const profitableGamble = (prob, prize, pay) => prob * prize > pay
+
+//Create a function that takes an integer and returns true if it's divisible by 100, otherwise return false.
+const divisible = (num) => num % 100 === 0 ? true : false
