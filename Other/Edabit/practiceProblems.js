@@ -180,3 +180,34 @@ const wordLengths = arr => arr.map(x => x.length)
 
 //Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
 const comp = (str1, str2) => str1.length === str2.length  
+
+//Create a function that returns true if an integer is evenly divisible by 5, and false otherwise.
+const divisibleByFive = n => n % 5 === 0
+
+//Create a function which returns "upper" if all the letters in a word are uppercase, "lower" if lowercase and "mixed" for any mix of the two.
+function getCase(str) {
+	
+	if (str === str.toUpperCase()){
+		return "upper"
+	} else if (str === str.toLowerCase()){
+		return "lower"
+	} else {
+		return "mixed"
+	}
+}
+//OR
+const getCase = str => 
+	str.toUpperCase() === str ? "upper" : 
+	str.toLowerCase() === str ? "lower" : "mixed"
+
+//Write a function that returns the length of a string. Make your function recursive.
+const length = (str) => str.length
+
+
+// Create a function that takes a string and returns a string with spaces in between all of the characters.
+
+function spaceMeOut(str) {
+	var result = str.split('').join(' ')
+	return result
+}
+const spaceMeOut = str => str.split('').join(' ')
