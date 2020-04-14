@@ -211,3 +211,24 @@ function spaceMeOut(str) {
 	return result
 }
 const spaceMeOut = str => str.split('').join(' ')
+
+
+//Given two strings, firstName and lastName, return a single string in the format "last, first".
+function concatName(firstName, lastName) {
+	return (lastName + ", " + firstName)
+}
+function concatName(firstName, lastName) {
+	return `${lastName}, ${firstName}`
+}
+const concatName = (firstName, lastName) => `${lastName}, ${firstName}`
+
+//Create a function that returns the number of argument it was called with.
+function numArgs(...args) {
+	return args.length
+}
+const numArgs = (...args) => args.length
+//this also works:
+function numArgs() {
+	return arguments.length;
+}
+
