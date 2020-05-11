@@ -245,3 +245,9 @@ function reverse(arr) {
 //or
 const reverse = arr => arr.reverse()
 
+//Per 6 coffee cups I buy, I get a 7th cup free. In total, I get 7 cups. Create a function that takes n cups bought and return as an integer the total number of cups I would get.
+function totalCups(n) {
+	return Math.floor(n + (n / 6))
+	}
+	//or
+const totalCups = n => Math.floor(n + (n / 6))
