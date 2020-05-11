@@ -8,13 +8,13 @@
 // isSameNum(2, "2") ➞ false
 
 function isSameNum(num1, num2) {
-    return num1 === num2 ? true : false
+	return num1 === num2 ? true : false
 }
 const arr = ["cars", "planes", ["trains", ["motorcycles"]]]
 
 // Fix the following using es6 destructuring
 // Only edit what's inside of [ trans1, trans2, trans3, trans4 ]
-let [ trans1, trans2, [trans3, [trans4 ]]] = arr
+let [trans1, trans2, [trans3, [trans4]]] = arr
 
 /* 
 console.log(trans1) // should output "cars"
@@ -66,7 +66,7 @@ function addUpTo(n) {
 //A for loop solution:
 function addUpTo(n) {
 	let sum = 0
-	for(let i=0; i<=n; i++){
+	for (let i = 0; i <= n; i++) {
 		sum += i
 	}
 	return sum
@@ -74,25 +74,25 @@ function addUpTo(n) {
 
 //Use the variable name rest in order to assign it an object containing the rest of the object properties. 
 
-const user = { name: "John", email: "john@example.com",city: "Phoenix", state: "AZ", country: "USA"}
+const user = { name: "John", email: "john@example.com", city: "Phoenix", state: "AZ", country: "USA" }
 const str = `({ name, email, ...rest} = user ).toString()`
 
 //NOT FINISHED
 // Given an array of numbers, create a function which returns the same array but with each element's index in the array added to itself. This means you add 0 to the number at index 0, add 1 to the number at index 1, etc...
 
 Examples
-addIndexes([0, 0, 0, 0, 0]) ➞ [0, 1, 2, 3, 4]
+addIndexes([0, 0, 0, 0, 0]) ➞[0, 1, 2, 3, 4]
 
-addIndexes([1, 2, 3, 4, 5]) ➞ [1, 3, 5, 7, 9]
+addIndexes([1, 2, 3, 4, 5]) ➞[1, 3, 5, 7, 9]
 
-addIndexes([5, 4, 3, 2, 1]) ➞ [5, 5, 5, 5, 5]
+addIndexes([5, 4, 3, 2, 1]) ➞[5, 5, 5, 5, 5]
 function addIndexes(arr) {
 	var indices = []
 	var i;
 	var idx = arr.indexOf()
-		for (i of arr) {
-			indices.push(idx)
-			idx = arr.indexOf(i, idx + 1)
+	for (i of arr) {
+		indices.push(idx)
+		idx = arr.indexOf(i, idx + 1)
 		return (i + arr.indexOf() + 1)
 	}
 }
@@ -179,26 +179,26 @@ function wordLengths(arr) {
 const wordLengths = arr => arr.map(x => x.length)
 
 //Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
-const comp = (str1, str2) => str1.length === str2.length  
+const comp = (str1, str2) => str1.length === str2.length
 
 //Create a function that returns true if an integer is evenly divisible by 5, and false otherwise.
 const divisibleByFive = n => n % 5 === 0
 
 //Create a function which returns "upper" if all the letters in a word are uppercase, "lower" if lowercase and "mixed" for any mix of the two.
 function getCase(str) {
-	
-	if (str === str.toUpperCase()){
+
+	if (str === str.toUpperCase()) {
 		return "upper"
-	} else if (str === str.toLowerCase()){
+	} else if (str === str.toLowerCase()) {
 		return "lower"
 	} else {
 		return "mixed"
 	}
 }
 //OR
-const getCase = str => 
-	str.toUpperCase() === str ? "upper" : 
-	str.toLowerCase() === str ? "lower" : "mixed"
+const getCase = str =>
+	str.toUpperCase() === str ? "upper" :
+		str.toLowerCase() === str ? "lower" : "mixed"
 
 //Write a function that returns the length of a string. Make your function recursive.
 const length = (str) => str.length
@@ -237,3 +237,11 @@ function numArgs() {
 
 // To illustrate, profitableGamble(0.2, 50, 9) should yield true, since the net profit is 1 (0.2 * 50 - 9), and 1 > 0.
 const profitableGamble = (prob, prize, pay) => prob * prize > pay ? true : false
+
+//Write a function to reverse an array.
+function reverse(arr) {
+	return arr.reverse()
+}
+//or
+const reverse = arr => arr.reverse()
+
