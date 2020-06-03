@@ -248,6 +248,26 @@ const reverse = arr => arr.reverse()
 //Per 6 coffee cups I buy, I get a 7th cup free. In total, I get 7 cups. Create a function that takes n cups bought and return as an integer the total number of cups I would get.
 function totalCups(n) {
 	return Math.floor(n + (n / 6))
-	}
-	//or
+}
+//or
 const totalCups = n => Math.floor(n + (n / 6))
+
+//Create a function that takes the number of wins, draws and losses and calculates the number of points a football team has obtained so far. A win receives 3 points, a draw 1 point and a loss 0 points.
+// function footballPoints(wins, draws, losses) {
+// 	return ((wins * 3) + (draws * 1))
+// }
+//or
+const footballPoints = (wins, draws, losses) => ((wins * 3) + (draws * 1))
+
+// Éowyn has written the function isOdd() to check if a given number is odd or not. Unfortunately, the function does not return the correct result for all the inputs. Help her fix the error.
+//function isOdd(num) {
+// 	if (num % 2 === 0) {
+// 		return false
+// 	} else {
+// 		return true
+// 	}
+// }
+//or
+// const isOdd = num => (num % 2 === 0) ? false : true 
+//even better:
+const isOdd = num => num%2 !== 0
