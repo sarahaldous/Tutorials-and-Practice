@@ -270,4 +270,33 @@ const footballPoints = (wins, draws, losses) => ((wins * 3) + (draws * 1))
 //or
 // const isOdd = num => (num % 2 === 0) ? false : true 
 //even better:
-const isOdd = num => num%2 !== 0
+const isOdd = num => num % 2 !== 0
+
+//Make a function using the && operator.
+const and = (a, b) => a === true && b === true
+//even shorter
+//const and = (a, b) => a && b
+
+//The eval() function will take whatever arithmetic is set up between the parentheses and calculate it. It either evaluates the expression, or executes the statement(s), whatever's between the parentheses.
+//function eq(evaluate) {
+// 	return eval(evaluate)
+// }
+const eq = (evaluate) => eval(evaluate)
+//even shorter:
+eq = eval
+
+
+//Create a function that takes a word and returns the new word without including the first character.
+function newWord(txt) {
+	return txt.substring(1)
+}
+//or
+const newWord = txt => txt.substring(1)
+//or
+function newWord(txt) {
+	return txt.slice(1, txt.length)
+}
+//or
+const newWord = txt => txt.slice(1, txt.length)
+//or figure out how to do it with charAt() and a for loop
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
