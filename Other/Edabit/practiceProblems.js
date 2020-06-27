@@ -300,3 +300,34 @@ function newWord(txt) {
 const newWord = txt => txt.slice(1, txt.length)
 //or figure out how to do it with charAt() and a for loop
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
+
+//Create a function that takes a string and returns it as an integer.
+function stringInt(str) {
+	return parseInt(str)
+}
+//or
+const stringInt = str => parseInt(str)
+
+//Booleans can also be written as integers, where 1 = True and 0 = False. Make a function that returns the opposite of the boolean given.
+function flipBool(b) {
+	if (b === 0 || b === false) {
+		return 1
+	} else {
+		return 0
+	}
+}
+//or
+const flipBool = b => b === 1 || b === true ? 0 : 1
+
+//Create a function which validates whether a given number exists, and could represent a real life quantity. Inputs will be given as a string.
+function validStrNumber(n) {
+	if (isNaN(n)) {
+		return false
+	} else {
+		return true
+	}
+}
+//or
+const validStrNumber = (n) => isNaN(n) ? false : true
+//even shorter
+const validStrNumber = n => !isNaN(n)
