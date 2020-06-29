@@ -331,3 +331,11 @@ function validStrNumber(n) {
 const validStrNumber = (n) => isNaN(n) ? false : true
 //even shorter
 const validStrNumber = n => !isNaN(n)
+
+//Create a function that takes an array of numbers or letters and returns a string.
+function arrayToString(arr) {
+	return arr.join('')
+}
+//or
+const arrayToString = (arr) => arr.join('')
+
