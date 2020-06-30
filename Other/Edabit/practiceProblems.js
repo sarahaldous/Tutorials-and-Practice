@@ -339,3 +339,31 @@ function arrayToString(arr) {
 //or
 const arrayToString = (arr) => arr.join('')
 
+//Write a function that uses the ternary operator to return "yeah" if the condition is true, and "nope" otherwise.
+const yeah_nope = (bool) => bool ? "yeah" : "nope"
+
+//Create a function that takes an array of two numbers and checks if the square root of the first number is equal to the cube root of the second number.
+function checkSquareAndCube(arr) {
+	let a = Math.sqrt(arr[0])
+	let b = Math.cbrt(arr[1])
+	if (a === b) {
+		return true
+	} else {
+		return false
+	}
+}
+//doesn't work:
+(Math.sqrt(arr[0]) === Math.cbrt(arr[1])) ? true : false
+//or
+const checkSquareAndCube = arr => Math.sqrt(arr[0]) ** 3 === arr[1];
+//or
+const checkSquareAndCube = ([a, b]) => Math.sqrt(a) === Math.cbrt(b);
+
+//Create a function that takes an equation (e.g. "1+1"), and returns the answer.
+function equation(s) {
+	return eval(s)
+}
+//or
+const equation = s => eval(s)
+//Although apparently using eval() is a huge security risk. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#Never_use_eval!
+
