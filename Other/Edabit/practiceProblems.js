@@ -367,3 +367,11 @@ function equation(s) {
 const equation = s => eval(s)
 //Although apparently using eval() is a huge security risk. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#Never_use_eval!
 
+//Create a function that returns an array of booleans from a given number by iterating through the number one digit at a time and appending true into the array if the digit is 1 and false otherwise.
+function integerBoolean(n) {
+	let array = n.split("")
+const result =  array.map(x => x == 1 ? true : false)
+	 return result
+}
+//so much better:
+const integerBoolean = n => [...n].map(a => a == 1);
