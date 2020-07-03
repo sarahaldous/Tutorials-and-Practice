@@ -375,3 +375,18 @@ const result =  array.map(x => x == 1 ? true : false)
 }
 //so much better:
 const integerBoolean = n => [...n].map(a => a == 1);
+
+//Create a function that takes date in the format yyyy/mm/dd as an input and returns "Bonfire toffee" if the date is October 31, else return "toffee".
+function halloween(dt) {
+	const spookyDay = new Date(dt)
+	const month = spookyDay.getMonth()
+	const date = spookyDay.getDate()
+	if (month === 9 && date === 31){
+		return "Bonfire toffee"
+	} else {
+		return "toffee"
+	}
+}
+//or
+const halloween = d => d.getMonth() === 9 && d.getDate() === 31
+? 'Bonfire toffee' : 'toffee';
