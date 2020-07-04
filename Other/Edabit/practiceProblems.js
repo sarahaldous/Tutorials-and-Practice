@@ -390,3 +390,22 @@ function halloween(dt) {
 //or
 const halloween = d => d.getMonth() === 9 && d.getDate() === 31
 ? 'Bonfire toffee' : 'toffee';
+
+//Create a function that takes a string and returns the concatenated first and last character.
+function firstLast(name) {
+	const first = name.charAt(0)
+	const last = name.charAt(name.length -1)
+	return first.concat('', last) 
+}
+//or
+const firstLast = name => name[0] + name[name.length - 1];
+//or
+function firstLast(name){
+	return name.slice(0,1) + name.slice( name.length -1)
+}
+//or
+function firstLast(name) {
+const first = name.charAt(0);
+const last = name.charAt(name.length-1);
+	return `${first}${last}`
+}
