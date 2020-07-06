@@ -409,3 +409,52 @@ const first = name.charAt(0);
 const last = name.charAt(name.length-1);
 	return `${first}${last}`
 }
+
+//Create a function that takes two numbers as arguments and return their sum.
+const addition = (a, b) => a + b
+
+//Create a function that takes a whole number as input and returns the shape with that number's amount of sides. Here are the expected outputs to get from these inputs.
+function nSidedShape(n) {
+	switch (n) {
+		case n = 1:
+		return "circle"
+			break;
+				case 2:
+		return "semi-circle"
+			break;
+				case 3:
+		return "triangle"
+			break;
+				case 4:
+		return "square"
+			break;
+				case 5:
+		return "pentagon"
+			break;
+				case 6:
+		return "hexagon"
+			break;
+				case 7:
+		return "heptagon"
+			break;
+			case 8:
+		return "octagon"
+			break;
+			case 9:
+		return "nonagon"
+			break;
+		case 10:
+		return "decagon"
+			break;
+	}	
+}
+//or
+function nSidedShape(n) {
+	return ['circle', 'semi-circle', 'triangle', 'square', 'pentagon', 'hexagon', 'heptagon', 'octagon', 'nonagon', 'decagon'][n-1];
+}
+//or
+function nSidedShape(n) {
+	const shapes = ["filler", "circle", "semi-circle", "triangle", "square", "pentagon",
+								 "hexagon", "heptagon", "octagon", "nonagon", "decagon"]
+	return shapes[n];
+}
