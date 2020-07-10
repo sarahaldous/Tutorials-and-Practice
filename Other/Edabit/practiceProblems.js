@@ -458,3 +458,14 @@ function nSidedShape(n) {
 								 "hexagon", "heptagon", "octagon", "nonagon", "decagon"]
 	return shapes[n];
 }
+
+//Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+const comp = (str1, str2) => str1.length === str2.length 
+
+// Create a function that takes in a current mood and return a sentence in the following format: "Today, I am feeling {mood}". However, if no argument is passed, return "Today, I am feeling neutral".
+function moodToday(mood="neutral") {
+	return `Today, I am feeling ${mood}`
+}
+//or
+const moodToday = (mood="neutral") =>  `Today, I am feeling ${mood}`
+
