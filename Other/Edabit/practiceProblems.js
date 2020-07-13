@@ -370,8 +370,8 @@ const equation = s => eval(s)
 //Create a function that returns an array of booleans from a given number by iterating through the number one digit at a time and appending true into the array if the digit is 1 and false otherwise.
 function integerBoolean(n) {
 	let array = n.split("")
-const result =  array.map(x => x == 1 ? true : false)
-	 return result
+	const result = array.map(x => x == 1 ? true : false)
+	return result
 }
 //so much better:
 const integerBoolean = n => [...n].map(a => a == 1);
@@ -381,7 +381,7 @@ function halloween(dt) {
 	const spookyDay = new Date(dt)
 	const month = spookyDay.getMonth()
 	const date = spookyDay.getDate()
-	if (month === 9 && date === 31){
+	if (month === 9 && date === 31) {
 		return "Bonfire toffee"
 	} else {
 		return "toffee"
@@ -389,24 +389,24 @@ function halloween(dt) {
 }
 //or
 const halloween = d => d.getMonth() === 9 && d.getDate() === 31
-? 'Bonfire toffee' : 'toffee';
+	? 'Bonfire toffee' : 'toffee';
 
 //Create a function that takes a string and returns the concatenated first and last character.
 function firstLast(name) {
 	const first = name.charAt(0)
-	const last = name.charAt(name.length -1)
-	return first.concat('', last) 
+	const last = name.charAt(name.length - 1)
+	return first.concat('', last)
 }
 //or
 const firstLast = name => name[0] + name[name.length - 1];
 //or
-function firstLast(name){
-	return name.slice(0,1) + name.slice( name.length -1)
+function firstLast(name) {
+	return name.slice(0, 1) + name.slice(name.length - 1)
 }
 //or
 function firstLast(name) {
-const first = name.charAt(0);
-const last = name.charAt(name.length-1);
+	const first = name.charAt(0);
+	const last = name.charAt(name.length - 1);
 	return `${first}${last}`
 }
 
@@ -417,55 +417,74 @@ const addition = (a, b) => a + b
 function nSidedShape(n) {
 	switch (n) {
 		case n = 1:
-		return "circle"
+			return "circle"
 			break;
-				case 2:
-		return "semi-circle"
+		case 2:
+			return "semi-circle"
 			break;
-				case 3:
-		return "triangle"
+		case 3:
+			return "triangle"
 			break;
-				case 4:
-		return "square"
+		case 4:
+			return "square"
 			break;
-				case 5:
-		return "pentagon"
+		case 5:
+			return "pentagon"
 			break;
-				case 6:
-		return "hexagon"
+		case 6:
+			return "hexagon"
 			break;
-				case 7:
-		return "heptagon"
+		case 7:
+			return "heptagon"
 			break;
-			case 8:
-		return "octagon"
+		case 8:
+			return "octagon"
 			break;
-			case 9:
-		return "nonagon"
+		case 9:
+			return "nonagon"
 			break;
 		case 10:
-		return "decagon"
+			return "decagon"
 			break;
-	}	
+	}
 }
 //or
 function nSidedShape(n) {
-	return ['circle', 'semi-circle', 'triangle', 'square', 'pentagon', 'hexagon', 'heptagon', 'octagon', 'nonagon', 'decagon'][n-1];
+	return ['circle', 'semi-circle', 'triangle', 'square', 'pentagon', 'hexagon', 'heptagon', 'octagon', 'nonagon', 'decagon'][n - 1];
 }
 //or
 function nSidedShape(n) {
 	const shapes = ["filler", "circle", "semi-circle", "triangle", "square", "pentagon",
-								 "hexagon", "heptagon", "octagon", "nonagon", "decagon"]
+		"hexagon", "heptagon", "octagon", "nonagon", "decagon"]
 	return shapes[n];
 }
 
 //Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
-const comp = (str1, str2) => str1.length === str2.length 
+const comp = (str1, str2) => str1.length === str2.length
 
 // Create a function that takes in a current mood and return a sentence in the following format: "Today, I am feeling {mood}". However, if no argument is passed, return "Today, I am feeling neutral".
-function moodToday(mood="neutral") {
+function moodToday(mood = "neutral") {
 	return `Today, I am feeling ${mood}`
 }
 //or
-const moodToday = (mood="neutral") =>  `Today, I am feeling ${mood}`
+const moodToday = (mood = "neutral") => `Today, I am feeling ${mood}`
+
+//check out this site for further study!!!
+//https://www.javascripttutorial.net/javascript-recursive-function/
+
+// Write a function that returns the length of a string. Make your function recursive.
+//first solution, not recursive:
+function length(str) {
+	return str.length
+}
+//recursive but long:
+function length(str) {
+	if (str == '') {
+		return 0
+	} else {
+		return length(str.substring(1)) + 1;
+	}
+}
+//shorter and still recursive
+const length = str => str == '' ? 0 : length(str.substring(1)) + 1;
 
