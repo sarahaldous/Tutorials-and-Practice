@@ -488,3 +488,14 @@ function length(str) {
 //shorter and still recursive
 const length = str => str == '' ? 0 : length(str.substring(1)) + 1;
 
+//Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+const comp = (str1, str2) => str1.length === str2.length
+
+//const arr = ["eyes", "nose", "lips", "ears"]
+var [/* Create variable lips here and assign it to arr[2] */] = arr
+const arr = ["eyes", "nose", "lips", "ears"]
+var [eyes, nose, lips, ears] = arr
+//or
+var [,,lips] = arr
+//or
+var [,, lips,] = arr
