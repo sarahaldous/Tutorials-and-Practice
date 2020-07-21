@@ -496,6 +496,15 @@ var [/* Create variable lips here and assign it to arr[2] */] = arr
 const arr = ["eyes", "nose", "lips", "ears"]
 var [eyes, nose, lips, ears] = arr
 //or
-var [,,lips] = arr
+var [, , lips] = arr
 //or
-var [,, lips,] = arr
+var [, , lips,] = arr
+
+//Create a function that returns how many possible outcomes can come from a certain number of switches (on / off).
+function posCom(num) {
+	return Math.pow(2, num)
+}
+//or
+const posCom = num => Math.pow(2, num)
+//or, without Math.pow:
+const posCom = num => 2 ** num
