@@ -508,3 +508,27 @@ function posCom(num) {
 const posCom = num => Math.pow(2, num)
 //or, without Math.pow:
 const posCom = num => 2 ** num
+
+//Write a function that returns the string "something" joined with a space and the given parameter a.
+function giveMeSomething(a) {
+	let something = "something "
+	return something.concat(a)
+}
+//or
+function giveMeSomething(a) {
+	return `something ${a}`
+}
+//or
+const giveMeSomething = a => `something ${a}`
+//or
+function giveMeSomething(a) {
+	return "something " + a
+}
+
+//A typical car can hold 4 passengers and 1 driver, overall allowing 5 people to travel around. Given n number of people, return how many cars are needed to seat everyone comfortably.
+function carsNeeded(n) {
+	return Math.ceil(n/5)
+}
+//or
+const carsNeeded = n => Math.ceil(n/5)
+
