@@ -527,8 +527,39 @@ function giveMeSomething(a) {
 
 //A typical car can hold 4 passengers and 1 driver, overall allowing 5 people to travel around. Given n number of people, return how many cars are needed to seat everyone comfortably.
 function carsNeeded(n) {
-	return Math.ceil(n/5)
+	return Math.ceil(n / 5)
 }
 //or
-const carsNeeded = n => Math.ceil(n/5)
+const carsNeeded = n => Math.ceil(n / 5)
+
+//Write a function that checks whether a person can watch an MA15+ rated movie. One of the following two conditions is required for admittance:
+// The person is at least 15 years old.
+// They have parental supervision.
+function acceptIntoMovie(age, isSupervised) {
+	if (age >= 15) {
+		return true
+	} else if (isSupervised == true) {
+		return true
+	} else {
+		return false
+	}
+}
+//or
+const acceptIntoMovie = (age, isSupervised) => (age >= 15 || isSupervised == true) ? true : false
+//or
+const acceptIntoMovie = (age, isSupervised) => age >= 15 || isSupervised
+
+//Given an n * n * n Rubik's cube, return the number of individual stickers that are needed to cover the whole cube.
+const howManyStickers = n => n * n * 6
+
+//Write a function that accepts base (decimal), height (decimal) and shape ("triangle", "parallelogram") as input and calculates the area of that shape.
+const areaShape = (base, height, shape) => shape == "triangle" ? (base * height / 2) : (base * height)
+
+// Create a function that returns the string "Burp" with the amount of "r's" determined by the input parameters of the function.
+function longBurp(num) {
+	let r = "r"
+	return `Bu${r.repeat(num)}p`
+}
+//or
+const longBurp = num => `Bu${"r".repeat(num)}p`
 
