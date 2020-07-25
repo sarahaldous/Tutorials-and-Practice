@@ -563,3 +563,5 @@ function longBurp(num) {
 //or
 const longBurp = num => `Bu${"r".repeat(num)}p`
 
+//Given two arrays, which represent two sandwiches, return whether both sandwiches use the same type of bread. The bread will always be found at the start and end of the array.
+const hasSameBread = (arr1, arr2)=> arr1[0] === arr2[0] && arr1[2] === arr2[2]
