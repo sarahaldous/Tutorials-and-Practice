@@ -564,4 +564,61 @@ function longBurp(num) {
 const longBurp = num => `Bu${"r".repeat(num)}p`
 
 //Given two arrays, which represent two sandwiches, return whether both sandwiches use the same type of bread. The bread will always be found at the start and end of the array.
-const hasSameBread = (arr1, arr2)=> arr1[0] === arr2[0] && arr1[2] === arr2[2]
+const hasSameBread = (arr1, arr2) => arr1[0] === arr2[0] && arr1[2] === arr2[2]
+
+//A bartender is writing a simple program to determine whether he should serve drinks to someone. He only serves drinks to people 18 and older and when he's not on break.
+
+// Given the person's age, and whether break time is in session, create a function which returns whether he should serve drinks.
+const shouldServeDrinks = (age, onBreak) => age >= 18 && !onBreak
+
+//You will be given two extremely similar arrays, but exactly one of the items in an array will be valued slightly higher than its counterpart (which means that evaluating the value > the other value will return true).
+// Create a function that returns whether the first array is slightly superior to that of the second.
+function isFirstSuperior(arr1, arr2) {
+	if (arr1[0] > arr2[0]) {
+		return true
+	} else if (arr1[1] > arr2[1]) {
+		return true
+	} else if (arr1[2] > arr2[2]) {
+		return true
+	} else if (arr1[3] > arr2[3]) {
+		return true
+	} else {
+		return false
+	}
+}
+//or
+function isFirstSuperior(arr1, arr2) {
+	return arr1.join('') > arr2.join('');
+}
+//or
+const isFirstSuperior = (arr1, arr2) => arr1.some((el, i) => el > arr2[i]);
+//or
+function isFirstSuperior(arr1, arr2) {
+	return arr1.reduce((a, b) => a + b) > arr2.reduce((a, b) => a + b) ? true : false;
+}
+//or
+const isFirstSuperior = (arr1, arr2) =>
+	arr1.filter((x, i) => x > arr2[i]).length > 0
+//or
+function isFirstSuperior(arr1, arr2) {
+	n = arr1.length
+	for (i = 0; i < n; i++) {
+		if (arr1[i] > arr2[i]) {
+			return true
+		}
+	}
+	return false
+}
+//or, the simplest:
+const isFirstSuperior = (arr1, arr2) => arr1 > arr2;
+
+//Create a function that takes an array of strings and numbers, and filters out the array so that it returns an array of integers only.
+function filterArray(arr) {
+	return arr.filter(Number.isInteger)
+}
+//or
+const filterArray = arr => arr.filter(Number.isInteger)
+//or
+let filterArray = a => a.filter(x => x % 1 == 0);
+//or
+const filterArray = arr => arr.filter(nums => typeof (nums) === 'number' && Number.isInteger(nums));
