@@ -622,3 +622,24 @@ const filterArray = arr => arr.filter(Number.isInteger)
 let filterArray = a => a.filter(x => x % 1 == 0);
 //or
 const filterArray = arr => arr.filter(nums => typeof (nums) === 'number' && Number.isInteger(nums));
+
+//Given an n * n * n Rubik's cube, return the number of individual stickers that are needed to cover the whole cube.
+const howManyStickers = n => n * n * 6 //or (n **2 * 6)
+
+//Create a function that takes a number and return an array of three numbers: half of the number, quarter of the number and an eighth of the number.
+function halfQuarterEighth(n) {
+	let arr = []
+	 arr.push(n/2, n/4, n/8)
+	return arr
+}
+//or
+const halfQuarterEighth = n => [n/2, n/4, n/8];
+//not shorter, but different logic:
+const halfQuarterEighth = n => {
+	let newArray = [];
+	for (let i = 0; i <= 2; i++) {
+	  n = n / 2;
+	  newArray.push(n);
+	}
+	return newArray;
+  };
