@@ -643,3 +643,19 @@ const halfQuarterEighth = n => {
 	}
 	return newArray;
   };
+
+//Write a function that stutters a word as if someone is struggling to read it. The first two letters are repeated twice with an ellipsis ... and space after each, and then the word is pronounced with a question mark ?.
+function stutter(word) {
+	let start = word.substr(0, 2)
+	return `${start}... ${start}... ${word}?`
+}
+//or
+function stutter(word) {
+	return word.substr(0,2) + "... " + word.substr(0,2) + "... " + word + "?"
+}
+//or
+const stutter = word => `${`${word.slice(0, 2)}... `.repeat(2)}${word}?`;
+//or
+function stutter(word) {
+	return `${word.slice(0,2)}... ${word.slice(0,2)}... ${word}?`
+}
