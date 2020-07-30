@@ -659,3 +659,8 @@ const stutter = word => `${`${word.slice(0, 2)}... `.repeat(2)}${word}?`;
 function stutter(word) {
 	return `${word.slice(0,2)}... ${word.slice(0,2)}... ${word}?`
 }
+
+// Create a function that returns the number of syllables in a simple string. The string is made up of short repeated words like "Lalalalalalala" (which would have 7 syllables).
+const countSyllables = str =>str.length / 2
+//or
+const countSyllables = str => str.match(/[aeiou]/gi).length
