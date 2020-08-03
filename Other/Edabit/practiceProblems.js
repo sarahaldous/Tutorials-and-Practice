@@ -664,3 +664,34 @@ function stutter(word) {
 const countSyllables = str =>str.length / 2
 //or
 const countSyllables = str => str.match(/[aeiou]/gi).length
+
+//Create a function which returns the selected filename from a path. Include the extension in your answer.
+function getFilename(path){
+	let arr = path.split("/")
+	return arr[arr.length -1]
+}
+//or
+const getFilename = p => p.split('/').slice(-1)[0]
+//or
+const getFilename = p => p.split('/').pop()
+
+//Given a pH value, return whether that value is "alkaline" (greater than 7), "acidic" (less than 7), or "neutral" (7). Return "invalid" if the value given is less than 0 or greater than 14.
+function pHName(pH) {
+	if (pH < 0 || pH> 14){
+		return "invalid"
+	} else if (pH > 0 && pH < 7) {
+		return "acidic"
+	} else if (pH === 7){
+		return "neutral"
+	} else {
+		return "alkaline"
+	}
+}
+//way better:
+const pHName = pH => pH < 0 || pH > 14 ? 'invalid' :
+	pH < 7 ? 'acidic' : pH > 7 ? 'alkaline' : 'neutral';
+	//written out on more lines:
+	const pHName = pH => pH < 0 || pH> 14 ? "invalid" 
+: pH > 0 && pH < 7 ? "acidic" 
+: pH === 7 ? "neutral" 
+: "alkaline"
