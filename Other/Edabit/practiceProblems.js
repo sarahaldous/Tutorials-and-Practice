@@ -629,20 +629,20 @@ const howManyStickers = n => n * n * 6 //or (n **2 * 6)
 //Create a function that takes a number and return an array of three numbers: half of the number, quarter of the number and an eighth of the number.
 function halfQuarterEighth(n) {
 	let arr = []
-	 arr.push(n/2, n/4, n/8)
+	arr.push(n / 2, n / 4, n / 8)
 	return arr
 }
 //or
-const halfQuarterEighth = n => [n/2, n/4, n/8];
+const halfQuarterEighth = n => [n / 2, n / 4, n / 8];
 //not shorter, but different logic:
 const halfQuarterEighth = n => {
 	let newArray = [];
 	for (let i = 0; i <= 2; i++) {
-	  n = n / 2;
-	  newArray.push(n);
+		n = n / 2;
+		newArray.push(n);
 	}
 	return newArray;
-  };
+};
 
 //Write a function that stutters a word as if someone is struggling to read it. The first two letters are repeated twice with an ellipsis ... and space after each, and then the word is pronounced with a question mark ?.
 function stutter(word) {
@@ -651,24 +651,24 @@ function stutter(word) {
 }
 //or
 function stutter(word) {
-	return word.substr(0,2) + "... " + word.substr(0,2) + "... " + word + "?"
+	return word.substr(0, 2) + "... " + word.substr(0, 2) + "... " + word + "?"
 }
 //or
 const stutter = word => `${`${word.slice(0, 2)}... `.repeat(2)}${word}?`;
 //or
 function stutter(word) {
-	return `${word.slice(0,2)}... ${word.slice(0,2)}... ${word}?`
+	return `${word.slice(0, 2)}... ${word.slice(0, 2)}... ${word}?`
 }
 
 // Create a function that returns the number of syllables in a simple string. The string is made up of short repeated words like "Lalalalalalala" (which would have 7 syllables).
-const countSyllables = str =>str.length / 2
+const countSyllables = str => str.length / 2
 //or
 const countSyllables = str => str.match(/[aeiou]/gi).length
 
 //Create a function which returns the selected filename from a path. Include the extension in your answer.
-function getFilename(path){
+function getFilename(path) {
 	let arr = path.split("/")
-	return arr[arr.length -1]
+	return arr[arr.length - 1]
 }
 //or
 const getFilename = p => p.split('/').slice(-1)[0]
@@ -677,11 +677,11 @@ const getFilename = p => p.split('/').pop()
 
 //Given a pH value, return whether that value is "alkaline" (greater than 7), "acidic" (less than 7), or "neutral" (7). Return "invalid" if the value given is less than 0 or greater than 14.
 function pHName(pH) {
-	if (pH < 0 || pH> 14){
+	if (pH < 0 || pH > 14) {
 		return "invalid"
 	} else if (pH > 0 && pH < 7) {
 		return "acidic"
-	} else if (pH === 7){
+	} else if (pH === 7) {
 		return "neutral"
 	} else {
 		return "alkaline"
@@ -690,8 +690,20 @@ function pHName(pH) {
 //way better:
 const pHName = pH => pH < 0 || pH > 14 ? 'invalid' :
 	pH < 7 ? 'acidic' : pH > 7 ? 'alkaline' : 'neutral';
-	//written out on more lines:
-	const pHName = pH => pH < 0 || pH> 14 ? "invalid" 
-: pH > 0 && pH < 7 ? "acidic" 
-: pH === 7 ? "neutral" 
-: "alkaline"
+//written out on more lines:
+const pHName = pH => pH < 0 || pH > 14 ? "invalid"
+	: pH > 0 && pH < 7 ? "acidic"
+		: pH === 7 ? "neutral"
+			: "alkaline"
+
+//Return the Kinetic Energy in Joules, given the mass and velocity. For the purposes of this challenge, round answers to the nearest integer. Formula is KE = 1/2mv²
+function kineticEnergy(m, v) {
+	let vel = Math.pow(v, 2)
+	return Math.round(vel * m / 2)
+}
+//or
+const kineticEnergy = (m, v) => Math.round((Math.pow(v, 2) * m / 2))
+//or
+function kineticEnergy(m,v){
+	return +(m * (v ** 2) / 2).toFixed(0);
+}
