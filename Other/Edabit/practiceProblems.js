@@ -707,3 +707,7 @@ const kineticEnergy = (m, v) => Math.round((Math.pow(v, 2) * m / 2))
 function kineticEnergy(m,v){
 	return +(m * (v ** 2) / 2).toFixed(0);
 }
+
+//Write a function that takes two numbers and returns if they should be added, subtracted, multiplied or divided to get 24. If none of the operations can give 24, return null.
+const operation = (num1, num2) =>
+	num1 - num2 === 24 ? "subtracted" : num1 + num2 === 24 ? "added" : num1 * num2 === 24 ? "multiplied" : num1 / num2 ===24 ? "divided" : null
