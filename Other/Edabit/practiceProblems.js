@@ -704,10 +704,17 @@ function kineticEnergy(m, v) {
 //or
 const kineticEnergy = (m, v) => Math.round((Math.pow(v, 2) * m / 2))
 //or
-function kineticEnergy(m,v){
+function kineticEnergy(m, v) {
 	return +(m * (v ** 2) / 2).toFixed(0);
 }
 
 //Write a function that takes two numbers and returns if they should be added, subtracted, multiplied or divided to get 24. If none of the operations can give 24, return null.
 const operation = (num1, num2) =>
-	num1 - num2 === 24 ? "subtracted" : num1 + num2 === 24 ? "added" : num1 * num2 === 24 ? "multiplied" : num1 / num2 ===24 ? "divided" : null
+	num1 - num2 === 24 ? "subtracted" : num1 + num2 === 24 ? "added" : num1 * num2 === 24 ? "multiplied" : num1 / num2 === 24 ? "divided" : null
+
+//Given a number and an object with min and max properties, return true if the number lies within the given range (inclusive).
+//Examples: isInRange(4, { min: 4, max: 5 }) ➞ true
+// isInRange(4, { min: 6, max: 10 }) ➞ false
+const isInRange = (num, range) => num >= range.min && num <= range.max
+
+
