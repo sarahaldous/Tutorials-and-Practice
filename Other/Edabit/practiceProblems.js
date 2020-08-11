@@ -717,4 +717,22 @@ const operation = (num1, num2) =>
 // isInRange(4, { min: 6, max: 10 }) ➞ false
 const isInRange = (num, range) => num >= range.min && num <= range.max
 
+//Create a function that takes an array and returns the sum of all numbers in the array.
+const getSumOfItems = arr => arr.reduce((a, c) => a + c, 0)
+//also works without the 0
+const getSumOfItems = arr => arr.reduce((a, c) => a + c)
+//or as a for loop
+function getSumOfItems(arr) {
+	let sum = 0;
+	arr.forEach(x => {
+		sum += x;
+	});
+	return sum;
+}
+//or with map
+const getSumOfItems = (arr) => {
+	let count = 0
+    arr.map(item => count += item)
+    return count
+}
 
