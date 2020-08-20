@@ -736,3 +736,46 @@ const getSumOfItems = (arr) => {
     return count
 }
 
+// Luke Skywalker has family and friends. Help him remind them who is who. Given a string with a name, return the relation of that person to Luke.
+const relationToLuke = name => 
+(name === "Darth Vader") ? "Luke, I am your father." 
+: name === "Leia" ?  "Luke, I am your sister." 
+: name === "Han" ? "Luke, I am your brother in law." 
+: "Luke, I am your droid."
+//with if statements and template literals
+function relationToLuke(name) {
+	let relation = "";
+	
+	if(name == 'Darth Vader') {
+		relation = "father";
+	} else if(name == 'Leia') {
+		relation = "sister";
+	} else if(name == 'Han') {
+		relation = "brother in law";
+	} else if(name == 'R2D2') {
+		relation = "droid";
+	} else {
+		throw new Error(`Unknown name [${name}]`);
+	}
+	
+	return `Luke I am your ${relation}.`;
+}
+
+//Create a function that takes a number as an argument and returns the amount of digits it has.
+function findDigitAmount(num) {
+	const string = num.toString()
+	return string.length
+}
+//or
+const findDigitAmount = num => (num.toString()).length
+
+//After an amazing performance, the crowd goes wild! People clap enthusiastically and most claps overlap with each other to create one homogeneous sound.
+
+// An overlapped clap is a clap which starts but doesn't finish, as in "ClaClap" (The first clap is cut short and there are overall 2 claps)
+function countClaps(str) {
+	return str.match(/C/g).length
+}
+//or
+function countClaps(str) {
+	return str.split('C').length-1
+}
