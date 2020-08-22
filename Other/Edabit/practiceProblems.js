@@ -779,3 +779,6 @@ function countClaps(str) {
 function countClaps(str) {
 	return str.split('C').length-1
 }
+
+//Create a function that takes a positive integer and returns the nth "star number".
+const starNumber = (n) => (n * (n - 1) * 6) + 1
