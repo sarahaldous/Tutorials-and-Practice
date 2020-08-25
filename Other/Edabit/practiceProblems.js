@@ -793,3 +793,34 @@ function addIndexes(arr) {
 }
 //or
 const addIndexes = arr => arr.map((number, index) => number + index)
+
+//Create a function that takes 3 numbers as arguments and return the largest of the 3 numbers
+// Try to keep your function as compact as possible and try to use an arrow function
+const findLargest = (n1, n2, n3) => Math.max(n1, n2, n3)
+//or, even shorter:
+const findLargest = Math.max;
+
+//Create a function where given the number n, return the sum of all square numbers up to and including n.
+const squaresSum = (n) => {
+	let sum = 0
+	for (let i = 0; i <= n; i++){
+		sum += i * i
+	} return sum
+}
+//or
+const squaresSum = n => n++ * n * (2 * n - 1) / 6
+//or
+const squaresSum = n => n * (n + 1) * (2 * n + 1) / 6;
+
+//There are three methods (exclude compile) that you can use with regular expression literals. Use these two methods to fix the code. One method returns a boolean if there is a match. The other method returns an iterator from a search.
+
+// Notes
+// Do not use the same method twice.
+// Do not use String methods that accept regular expresssions as arguments.
+function twoMethods() {
+	// find and equals are not regular expression methods.  Replace them. 
+	let methodOne = /hello/.exec("hello")[0] === "hello" 
+	let methodTwo = /hello/.test("hello") // returns a boolean
+	return methodOne && methodTwo
+}
+//or
