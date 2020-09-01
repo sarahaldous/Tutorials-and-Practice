@@ -836,3 +836,12 @@ function has_bugs(buggy_code) {
 //Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed. This is calculated by subtracting the number of downvotes from upvotes.
 const getVoteCount = votes => votes.upvotes - votes.downvotes
 
+//Create a function that takes two numbers num1, num2, and an array arr and returns an array containing all the numbers in arr greater than num1 and less than num2.
+function arrBetween(num1, num2, arr) {
+	function between(num){
+		return num > num1 && num < num2
+	}
+	return arr.filter(between)
+}
+//much shorter version:
+const arrBetween = (a,b,c) => c.filter(x => x > a && x < b);
