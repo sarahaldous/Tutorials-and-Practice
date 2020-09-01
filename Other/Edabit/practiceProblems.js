@@ -832,3 +832,7 @@ function has_bugs(buggy_code) {
 		return 'it\'s a good day'
 	}
 }
+
+//Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed. This is calculated by subtracting the number of downvotes from upvotes.
+const getVoteCount = votes => votes.upvotes - votes.downvotes
+
