@@ -845,3 +845,12 @@ function arrBetween(num1, num2, arr) {
 }
 //much shorter version:
 const arrBetween = (a,b,c) => c.filter(x => x > a && x < b);
+
+//Create a function which makes the last character of a string repeat n number of times.
+function modifyLast(str, n) {
+	return str + (str.charAt(str.length -1)).repeat(n - 1)
+}
+//or
+const modifyLast = (str, n) => str + (str.charAt(str.length -1)).repeat(n - 1)
+//or
+const modifyLast = (s,n) => `${s.slice(0,-1)}${s.slice(-1).repeat(n)}`
