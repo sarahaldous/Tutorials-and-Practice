@@ -854,3 +854,6 @@ function modifyLast(str, n) {
 const modifyLast = (str, n) => str + (str.charAt(str.length -1)).repeat(n - 1)
 //or
 const modifyLast = (s,n) => `${s.slice(0,-1)}${s.slice(-1).repeat(n)}`
+
+//Create a function that takes a number as an argument and returns the square root of that number cubed.
+const cubeSquareRoot = num => Math.pow((Math.sqrt(num)), 3)
