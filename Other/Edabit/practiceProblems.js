@@ -732,32 +732,32 @@ function getSumOfItems(arr) {
 //or with map
 const getSumOfItems = (arr) => {
 	let count = 0
-    arr.map(item => count += item)
-    return count
+	arr.map(item => count += item)
+	return count
 }
 
 // Luke Skywalker has family and friends. Help him remind them who is who. Given a string with a name, return the relation of that person to Luke.
-const relationToLuke = name => 
-(name === "Darth Vader") ? "Luke, I am your father." 
-: name === "Leia" ?  "Luke, I am your sister." 
-: name === "Han" ? "Luke, I am your brother in law." 
-: "Luke, I am your droid."
+const relationToLuke = name =>
+	(name === "Darth Vader") ? "Luke, I am your father."
+		: name === "Leia" ? "Luke, I am your sister."
+			: name === "Han" ? "Luke, I am your brother in law."
+				: "Luke, I am your droid."
 //with if statements and template literals
 function relationToLuke(name) {
 	let relation = "";
-	
-	if(name == 'Darth Vader') {
+
+	if (name == 'Darth Vader') {
 		relation = "father";
-	} else if(name == 'Leia') {
+	} else if (name == 'Leia') {
 		relation = "sister";
-	} else if(name == 'Han') {
+	} else if (name == 'Han') {
 		relation = "brother in law";
-	} else if(name == 'R2D2') {
+	} else if (name == 'R2D2') {
 		relation = "droid";
 	} else {
 		throw new Error(`Unknown name [${name}]`);
 	}
-	
+
 	return `Luke I am your ${relation}.`;
 }
 
@@ -777,7 +777,7 @@ function countClaps(str) {
 }
 //or
 function countClaps(str) {
-	return str.split('C').length-1
+	return str.split('C').length - 1
 }
 
 //Create a function that takes a positive integer and returns the nth "star number".
@@ -786,8 +786,8 @@ const starNumber = (n) => (n * (n - 1) * 6) + 1
 //Given an array of numbers, create a function which returns the same array but with each element's index in the array added to itself. This means you add 0 to the number at index 0, add 1 to the number at index 1, etc...
 function addIndexes(arr) {
 	let arr2 = []
-			for (let i = 0; i < arr.length; i++){
-		 arr2.push(arr[i] + i)
+	for (let i = 0; i < arr.length; i++) {
+		arr2.push(arr[i] + i)
 	}
 	return arr2
 }
@@ -803,7 +803,7 @@ const findLargest = Math.max;
 //Create a function where given the number n, return the sum of all square numbers up to and including n.
 const squaresSum = (n) => {
 	let sum = 0
-	for (let i = 0; i <= n; i++){
+	for (let i = 0; i <= n; i++) {
 		sum += i * i
 	} return sum
 }
@@ -819,41 +819,54 @@ const squaresSum = n => n * (n + 1) * (2 * n + 1) / 6;
 // Do not use String methods that accept regular expresssions as arguments.
 function twoMethods() {
 	// find and equals are not regular expression methods.  Replace them. 
-	let methodOne = /hello/.exec("hello")[0] === "hello" 
+	let methodOne = /hello/.exec("hello")[0] === "hello"
 	let methodTwo = /hello/.test("hello") // returns a boolean
 	return methodOne && methodTwo
 }
 
-The challenge is to try and fix this buggy code, given the inputs true and false. See the examples below for the expected output.
+The challenge is to try and fix this buggy code, given the inputs true and false.See the examples below for the expected output.
 function has_bugs(buggy_code) {
-	if (buggy_code) {
-		return 'sad days'
-	} else {
-		return 'it\'s a good day'
+		if (buggy_code) {
+			return 'sad days'
+		} else {
+			return 'it\'s a good day'
+		}
 	}
-}
 
 //Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed. This is calculated by subtracting the number of downvotes from upvotes.
 const getVoteCount = votes => votes.upvotes - votes.downvotes
 
 //Create a function that takes two numbers num1, num2, and an array arr and returns an array containing all the numbers in arr greater than num1 and less than num2.
 function arrBetween(num1, num2, arr) {
-	function between(num){
+	function between(num) {
 		return num > num1 && num < num2
 	}
 	return arr.filter(between)
 }
 //much shorter version:
-const arrBetween = (a,b,c) => c.filter(x => x > a && x < b);
+const arrBetween = (a, b, c) => c.filter(x => x > a && x < b);
 
 //Create a function which makes the last character of a string repeat n number of times.
 function modifyLast(str, n) {
-	return str + (str.charAt(str.length -1)).repeat(n - 1)
+	return str + (str.charAt(str.length - 1)).repeat(n - 1)
 }
 //or
-const modifyLast = (str, n) => str + (str.charAt(str.length -1)).repeat(n - 1)
+const modifyLast = (str, n) => str + (str.charAt(str.length - 1)).repeat(n - 1)
 //or
-const modifyLast = (s,n) => `${s.slice(0,-1)}${s.slice(-1).repeat(n)}`
+const modifyLast = (s, n) => `${s.slice(0, -1)}${s.slice(-1).repeat(n)}`
 
 //Create a function that takes a number as an argument and returns the square root of that number cubed.
 const cubeSquareRoot = num => Math.pow((Math.sqrt(num)), 3)
+
+//Create a function that takes a number (from 1 to 12) and returns its corresponding month name as a string. For example, if you're given 3 as input, your function should return "March", because March is the 3rd month.
+function monthName(num) {
+	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+	return months[num - 1]
+}
+//or, using new Date()
+function monthName(num) {
+	return new Date(2015, num - 1).toLocaleString("en-gb", { month: 'long' })
+}
+//or, with template literals:
+const monthName = month =>
+	new Date(`1970 ${month}`).toLocaleString('en', { month: 'long' });
