@@ -870,3 +870,27 @@ function monthName(num) {
 //or, with template literals:
 const monthName = month =>
 	new Date(`1970 ${month}`).toLocaleString('en', { month: 'long' });
+
+//Create a function that takes three number arguments — one number as an input and two additional numbers representing the endpoints of a closed range — and return the number limited to this range.
+
+// If the number falls within the range, the number should be returned.
+// If the number is less than the lower limit of the range, the lower limit should be returned.
+// If the number is greater than the upper limit of the range, the upper limit should be returned.
+function limitNumber(num, rangeLow, rangeHigh) {
+	if (num > rangeLow && num < rangeHigh){
+		return num
+	} else if (num < rangeLow){
+		return rangeLow
+	} else {
+		return rangeHigh
+	}
+}	
+//or
+function limitNumber(num, rangeLow, rangeHigh) {
+	return [...arguments].sort((a, b) => a - b)[1]
+}
+//or
+let limitNumber = (num, low, high) =>
+num < low ? low : num > high ? high : num;
+//or
+const limitNumber = (num, rangeLow, rangeHigh) => Math.min(Math.max(num, rangeLow), rangeHigh);
