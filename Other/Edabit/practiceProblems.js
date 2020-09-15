@@ -877,20 +877,35 @@ const monthName = month =>
 // If the number is less than the lower limit of the range, the lower limit should be returned.
 // If the number is greater than the upper limit of the range, the upper limit should be returned.
 function limitNumber(num, rangeLow, rangeHigh) {
-	if (num > rangeLow && num < rangeHigh){
+	if (num > rangeLow && num < rangeHigh) {
 		return num
-	} else if (num < rangeLow){
+	} else if (num < rangeLow) {
 		return rangeLow
 	} else {
 		return rangeHigh
 	}
-}	
+}
 //or
 function limitNumber(num, rangeLow, rangeHigh) {
 	return [...arguments].sort((a, b) => a - b)[1]
 }
 //or
 let limitNumber = (num, low, high) =>
-num < low ? low : num > high ? high : num;
+	num < low ? low : num > high ? high : num;
 //or
 const limitNumber = (num, rangeLow, rangeHigh) => Math.min(Math.max(num, rangeLow), rangeHigh);
+
+//In this challenge, you have to implement a function that returns the given distance kilometers converted into miles. You have to round the result up to the fifth decimal digit.
+function kmtomiles(kilometers) {
+	return parseFloat((kilometers * 0.621371).toFixed(5))
+}
+//or
+const kmtomiles = kilometers => parseFloat((kilometers * 0.621371).toFixed(5))
+
+//Create a function that takes a string and returns the word count. The string will be a sentence.
+function countWords(str) {
+	let array = str.split(' ')
+	return array.length
+}
+//or
+const countWords = str => str.split(' ').length
