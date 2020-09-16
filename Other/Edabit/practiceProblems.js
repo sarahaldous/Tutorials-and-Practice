@@ -909,3 +909,28 @@ function countWords(str) {
 }
 //or
 const countWords = str => str.split(' ').length
+
+//Create a function that counts the number of syllables a word has. Each syllable is separated with a dash -.
+const numberSyllables = word => word.split('-').length
+
+//Your spouse wants a copy of the stolen items. Given an object containing the stolen items, return a copy of that list.
+function makeCopy(obj) {
+	let newObj = {...obj}
+	return newObj
+}
+//or
+const makeCopy = obj => ({...obj});
+//or
+function makeCopy(obj) {
+	return JSON.parse(JSON.stringify(obj))
+}
+//or
+const makeCopy = obj => Object.assign({}, obj);
+
+//Write a function that searches an array of names (unsorted) for the name "Bob" and returns the location in the array. If Bob is not in the array, return -1.
+function findBob(names) {
+	const isBob = name => name == "Bob"
+	return names.findIndex(isBob)
+}
+//or
+const findBob = names => names.indexOf('Bob');
