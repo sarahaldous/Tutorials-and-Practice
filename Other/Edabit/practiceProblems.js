@@ -915,11 +915,11 @@ const numberSyllables = word => word.split('-').length
 
 //Your spouse wants a copy of the stolen items. Given an object containing the stolen items, return a copy of that list.
 function makeCopy(obj) {
-	let newObj = {...obj}
+	let newObj = { ...obj }
 	return newObj
 }
 //or
-const makeCopy = obj => ({...obj});
+const makeCopy = obj => ({ ...obj });
 //or
 function makeCopy(obj) {
 	return JSON.parse(JSON.stringify(obj))
@@ -934,3 +934,6 @@ function findBob(names) {
 }
 //or
 const findBob = names => names.indexOf('Bob');
+
+//Create a function that takes an angle in radians and converts it into degrees.
+const toDegree = radian => Math.round((180 / Math.PI) * radian)
