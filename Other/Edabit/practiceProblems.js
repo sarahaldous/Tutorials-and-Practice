@@ -937,3 +937,41 @@ const findBob = names => names.indexOf('Bob');
 
 //Create a function that takes an angle in radians and converts it into degrees.
 const toDegree = radian => Math.round((180 / Math.PI) * radian)
+
+//Create a function that takes the number of daily average recovered cases recovers, daily average newCases, current activeCases, and returns the number of days it will take to reach zero cases.
+function endCorona(recovers, newCases, activeCases) {
+	return Math.ceil(activeCases / (recovers - newCases))
+}
+//or
+const endCorona = (recovers, newCases, activeCases) => Math.ceil(activeCases / (recovers - newCases))
+
+//Create a function that takes an array of numbers and return the first and last elements as a new array.
+function firstLast(arr) {
+	return [arr[0], arr[arr.length - 1]]
+}
+//or
+const firstLast = (arr) => [arr[0], arr[arr.length - 1]]
+//or
+const firstLast = arr => [arr.shift(), arr.pop()]
+
+//Given an array of numbers, negate all elements contained within.
+const negate = (arr) => arr.map(x => x * -1)
+//or, with a for loop:
+function negate(arr) {
+	for(let i = 0; i < arr.length; i++) {
+		arr[i] = -arr[i];
+	}
+	return arr;
+}
+//or
+const negate = (arr) => arr.map(x => -x);
+
+//Create a function that flips M's to W's (all uppercase).
+const wumbo = words => words.replace(/M/g, 'W')
+//or
+function wumbo(words) {
+	return words
+	  .split("")
+	  .map(x => (x === "M" ? "W" : x))
+	  .join("");
+  }
