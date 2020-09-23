@@ -975,3 +975,14 @@ function wumbo(words) {
 	  .map(x => (x === "M" ? "W" : x))
 	  .join("");
   }
+
+//The Math.abs() function returns the absolute value of a number. This means that it returns a number's positive value. You can think of it as the distance away from zero.
+
+// Create a function that recreates this functionality.
+  const absolute = n =>	n > 0 ? n : -n
+//or
+const absolute = n =>( n**2)**0.5
+//or, with Math.sign, which produces a 1 or -1, depending on the number (or string's) sign:
+const absolute = n => n * Math.sign(n);
+//one more:
+const absolute = n => Math.max(n, -n);
