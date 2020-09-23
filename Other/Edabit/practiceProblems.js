@@ -958,7 +958,7 @@ const firstLast = arr => [arr.shift(), arr.pop()]
 const negate = (arr) => arr.map(x => x * -1)
 //or, with a for loop:
 function negate(arr) {
-	for(let i = 0; i < arr.length; i++) {
+	for (let i = 0; i < arr.length; i++) {
 		arr[i] = -arr[i];
 	}
 	return arr;
@@ -971,18 +971,47 @@ const wumbo = words => words.replace(/M/g, 'W')
 //or
 function wumbo(words) {
 	return words
-	  .split("")
-	  .map(x => (x === "M" ? "W" : x))
-	  .join("");
-  }
+		.split("")
+		.map(x => (x === "M" ? "W" : x))
+		.join("");
+}
 
 //The Math.abs() function returns the absolute value of a number. This means that it returns a number's positive value. You can think of it as the distance away from zero.
 
 // Create a function that recreates this functionality.
-  const absolute = n =>	n > 0 ? n : -n
+const absolute = n => n > 0 ? n : -n
 //or
-const absolute = n =>( n**2)**0.5
+const absolute = n => (n ** 2) ** 0.5
 //or, with Math.sign, which produces a 1 or -1, depending on the number (or string's) sign:
 const absolute = n => n * Math.sign(n);
 //one more:
 const absolute = n => Math.max(n, -n);
+
+//Create a function that changes specific words into emoticons. Given a sentence as a string, replace the words smile, grin, sad and mad with their corresponding emoticons.
+function emotify(str) {
+	const array = str.split(" ")
+	if (array[2] == "smile") {
+		return 'Make me :D'
+	} else if (array[2] == 'grin') {
+		return 'Make me :)'
+	} else if (array[2] == 'sad') {
+		return 'Make me :('
+	} else {
+		return 'Make me :P'
+	}
+}
+//or
+function emotify(str) {
+	str = str.replace(/smile/g, ':D');
+	str = str.replace(/grin/g, ':)');
+	str = str.replace(/sad/g, ':(');
+	str = str.replace(/mad/g, ':P');
+
+	return str;
+}
+//or
+const emotify = s => 'Make me ' + ({ smile: ':D', grin: ':)', sad: ':(', mad: ':P' })[s.split(' ').pop()];
+//or
+function emotify(str) {
+	return str.replace(/smile|grin|sad|mad/g, x => ({smile: ':D', grin: ':)', sad: ':(', mad:':P'}[x]))
+}
