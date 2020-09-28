@@ -1015,3 +1015,31 @@ const emotify = s => 'Make me ' + ({ smile: ':D', grin: ':)', sad: ':(', mad: ':
 function emotify(str) {
 	return str.replace(/smile|grin|sad|mad/g, x => ({smile: ':D', grin: ':)', sad: ':(', mad:':P'}[x]))
 }
+
+//Write a function that returns the strings:
+// "both" if both given booleans a and b are true.
+// "first" if only a is true.
+// "second" if only b is true .
+// "neither" if both a and b are false.
+const areTrue = (a, b) => (a == true) && (b == true) ? "both" 
+: (a == true) ? "first" 
+: (b == true) ? "second" 
+: "neither";
+
+//Given a string, return true if its length is even or false if the length is odd.
+const oddOrEven = s => s.length % 2 === 0 ? true : false
+
+//Given two arguments, return an array which contains these two arguments.
+function makePair(num1, num2) {
+	const array = []
+	array.push(num1, num2)
+	return array
+}
+//or
+function makePair(num1, num2) {
+	return [...arguments]
+}
+//or
+const makePair = (a,b) => [a,b];
+//or
+const makePair = (...a) => a;
