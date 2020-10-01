@@ -1043,3 +1043,45 @@ function makePair(num1, num2) {
 const makePair = (a,b) => [a,b];
 //or
 const makePair = (...a) => a;
+
+//Create a function that takes voltage and current and returns the calculated power.
+const circuitPower = (voltage, current) => voltage * current
+
+//Create a class that takes the following four arguements for a particular football player:
+
+// name
+// age
+// height
+// weight
+// Also, create three functions for the class that returns the following strings:
+
+// getAge() returns "name is age age"
+// getHeight() returns "name is heightcm"
+// getWeight() returns "name weighs weightkg"
+class Player {
+	constructor(name, age, height, weight) {
+		this.age = age;
+		this.name = name;
+		this.height = height;
+		this.weight = weight;
+	}
+	
+	getAge() {
+		return `${this.name} is age ${this.age}`
+	}
+
+	getHeight() {
+		return `${this.name} is ${this.height}cm`
+	}
+		
+	getWeight() {
+		return `${this.name} weighs ${this.weight}kg`
+	}
+	//or, write the functions in arrow form, as follows:
+	// getAge = () => `${this.name} is age ${this.age}`;
+	// getHeight = () => `${this.name} is ${this.height}cm`;
+	// getWeight = () => `${this.name} weighs ${this.weight}kg`;
+}		
+
+//Create a function that inverts the rgb values of a given tuple.
+const colorInvert = rgb => rgb.map(x => 255 - x)
