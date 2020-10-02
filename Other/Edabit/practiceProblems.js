@@ -1013,7 +1013,7 @@ function emotify(str) {
 const emotify = s => 'Make me ' + ({ smile: ':D', grin: ':)', sad: ':(', mad: ':P' })[s.split(' ').pop()];
 //or
 function emotify(str) {
-	return str.replace(/smile|grin|sad|mad/g, x => ({smile: ':D', grin: ':)', sad: ':(', mad:':P'}[x]))
+	return str.replace(/smile|grin|sad|mad/g, x => ({ smile: ':D', grin: ':)', sad: ':(', mad: ':P' }[x]))
 }
 
 //Write a function that returns the strings:
@@ -1021,10 +1021,10 @@ function emotify(str) {
 // "first" if only a is true.
 // "second" if only b is true .
 // "neither" if both a and b are false.
-const areTrue = (a, b) => (a == true) && (b == true) ? "both" 
-: (a == true) ? "first" 
-: (b == true) ? "second" 
-: "neither";
+const areTrue = (a, b) => (a == true) && (b == true) ? "both"
+	: (a == true) ? "first"
+		: (b == true) ? "second"
+			: "neither";
 
 //Given a string, return true if its length is even or false if the length is odd.
 const oddOrEven = s => s.length % 2 === 0 ? true : false
@@ -1040,7 +1040,7 @@ function makePair(num1, num2) {
 	return [...arguments]
 }
 //or
-const makePair = (a,b) => [a,b];
+const makePair = (a, b) => [a, b];
 //or
 const makePair = (...a) => a;
 
@@ -1065,7 +1065,7 @@ class Player {
 		this.height = height;
 		this.weight = weight;
 	}
-	
+
 	getAge() {
 		return `${this.name} is age ${this.age}`
 	}
@@ -1073,7 +1073,7 @@ class Player {
 	getHeight() {
 		return `${this.name} is ${this.height}cm`
 	}
-		
+
 	getWeight() {
 		return `${this.name} weighs ${this.weight}kg`
 	}
@@ -1081,7 +1081,18 @@ class Player {
 	// getAge = () => `${this.name} is age ${this.age}`;
 	// getHeight = () => `${this.name} is ${this.height}cm`;
 	// getWeight = () => `${this.name} weighs ${this.weight}kg`;
-}		
+}
 
 //Create a function that inverts the rgb values of a given tuple.
 const colorInvert = rgb => rgb.map(x => 255 - x)
+
+//Create a function that accepts a measurement value in inches and returns the equivalent of the measurement value in feet.
+const inchesToFeet = inches => Math.floor(inches / 12)
+
+//Write this function, which returns a boolean, as simply as possible:
+const parity = n => ((n % 2) === 0) ? "even" : "odd"
+//or
+const parity = n => ['even', 'odd'][n % 2];
+
+//Create a function that counts how many D's are in a sentence.
+const countDs = sentence => sentence.match(/d/gi).length
