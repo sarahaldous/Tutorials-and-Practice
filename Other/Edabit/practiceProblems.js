@@ -1096,3 +1096,45 @@ const parity = n => ['even', 'odd'][n % 2];
 
 //Create a function that counts how many D's are in a sentence.
 const countDs = sentence => sentence.match(/d/gi).length
+
+//Create a function that calculates the chance of being an imposter. The formula for the chances of being an imposter is 100 × (i / p) where i is the imposter count and p is the player count. Make sure to round the value to the nearest integer and return the value as a percentage.
+const imposterFormula = (i, p) => Math.round((i / p) * 100) + "%"
+//or
+const imposterFormula = (i, p) => `${Math.round(100 * (i / p))}%`;
+
+// You need to create two functions to substitute toString() and parseInt(); A function called intToString() that converts integers into strings and a function called stringToInt() that converts strings into integers.
+function intToString(num) {
+	return  `${num}` 
+}
+
+
+function stringToInt(num) {
+	return (num * 7) / 7
+}
+//or
+const intToString = num => `${num}` 
+
+
+const stringToInt = num =>(num * 7) / 7
+//or
+const intToString = n => ''+n;
+const stringToInt = n => +n;
+//or
+const [intToString, stringToInt] = [String, Number];
+//or
+let intToString = n => String(n);
+let stringToInt = n => +n;
+
+//Write five adder functions:
+// add2(x) should return 2 + x.
+// add3(x) should return 3 + x.
+// add5(x) should return 5 + x.
+// add7(x) should return 7 + x.
+// add11(x) should return 11 + x.
+const add2 = x => x + 2;
+const add3 = x => x + 3;
+const add5 = x => x + 5;
+const add7 = x => x + 7;
+const add11 = x => x + 11;
+//or
+[2, 3, 5, 7, 11].forEach(n => this[`add${n}`] = x => x + n);
