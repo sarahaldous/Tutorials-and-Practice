@@ -1149,3 +1149,11 @@ function createID(firstname, lastname) {
 //or
 const createID = (f,l) =>
  f[0].toLowerCase() + l[0].toUpperCase() + l.slice(1,3).toLowerCase();
+
+//Use the most streamlined version of a function that returns a boolean based on whether the number is even
+ const isEven = n => n % 2 == 0
+//or
+const isEven = n => !(n % 2); //if you do it without the bang, it returns a number, not a boolean
+
+//Given the radius of a circle and the area of a square, return true if the circumference of the circle is greater than the square's perimeter and false if the square's perimeter is greater than the circumference of the circle.
+const circle_or_square = (rad, area) => 6.28 * rad > Math.sqrt(area) * 4
