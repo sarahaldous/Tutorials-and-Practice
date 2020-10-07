@@ -1138,3 +1138,14 @@ const add7 = x => x + 7;
 const add11 = x => x + 11;
 //or
 [2, 3, 5, 7, 11].forEach(n => this[`add${n}`] = x => x + n);
+
+//Create a function that will return a four-character ID using the person's first name and last name. The first character will be the first letter of the first name but in lowercase. The next three characters will be the first three characters of the last name, but the first letter will be capitalized and the other two will be in lower case.
+function createID(firstname, lastname) {
+	const first = firstname.split('')
+	const last = lastname.split('')
+	return first[0].toLowerCase() 
+		+ last[0].toUpperCase() + last[1].toLowerCase() + last[2].toLowerCase()
+}
+//or
+const createID = (f,l) =>
+ f[0].toLowerCase() + l[0].toUpperCase() + l.slice(1,3).toLowerCase();
