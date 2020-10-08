@@ -1157,3 +1157,19 @@ const isEven = n => !(n % 2); //if you do it without the bang, it returns a numb
 
 //Given the radius of a circle and the area of a square, return true if the circumference of the circle is greater than the square's perimeter and false if the square's perimeter is greater than the circumference of the circle.
 const circle_or_square = (rad, area) => 6.28 * rad > Math.sqrt(area) * 4
+
+//Use template literals in a template string to create the following phrase with these variables:
+const  format = (a, b, c) =>`Their names were: ${a}, ${b} and ${c}.`
+
+//You will need to write three unfinished logic gates. Continue to write the three logic gates: AND, OR, and NOT.
+const NOT = (n) =>	n == 1 ? 0 : 1
+const AND = (a, b) =>	a == b ? a : 0
+const OR = (a, b) => a == 1 || b == 1 ? 1 : 0
+//or
+const NOT = n => n ^= 1;
+const AND = (a, b) => a & b;
+const OR = (a, b) => a | b;
+//or
+const NOT = n => !n%2; //or n => +!n
+const AND = (a, b) => a && b;
+const OR = (a, b) => a || b;
