@@ -1104,7 +1104,7 @@ const imposterFormula = (i, p) => `${Math.round(100 * (i / p))}%`;
 
 // You need to create two functions to substitute toString() and parseInt(); A function called intToString() that converts integers into strings and a function called stringToInt() that converts strings into integers.
 function intToString(num) {
-	return  `${num}` 
+	return `${num}`
 }
 
 
@@ -1112,12 +1112,12 @@ function stringToInt(num) {
 	return (num * 7) / 7
 }
 //or
-const intToString = num => `${num}` 
+const intToString = num => `${num}`
 
 
-const stringToInt = num =>(num * 7) / 7
+const stringToInt = num => (num * 7) / 7
 //or
-const intToString = n => ''+n;
+const intToString = n => '' + n;
 const stringToInt = n => +n;
 //or
 const [intToString, stringToInt] = [String, Number];
@@ -1143,15 +1143,15 @@ const add11 = x => x + 11;
 function createID(firstname, lastname) {
 	const first = firstname.split('')
 	const last = lastname.split('')
-	return first[0].toLowerCase() 
+	return first[0].toLowerCase()
 		+ last[0].toUpperCase() + last[1].toLowerCase() + last[2].toLowerCase()
 }
 //or
-const createID = (f,l) =>
- f[0].toLowerCase() + l[0].toUpperCase() + l.slice(1,3).toLowerCase();
+const createID = (f, l) =>
+	f[0].toLowerCase() + l[0].toUpperCase() + l.slice(1, 3).toLowerCase();
 
 //Use the most streamlined version of a function that returns a boolean based on whether the number is even
- const isEven = n => n % 2 == 0
+const isEven = n => n % 2 == 0
 //or
 const isEven = n => !(n % 2); //if you do it without the bang, it returns a number, not a boolean
 
@@ -1159,17 +1159,27 @@ const isEven = n => !(n % 2); //if you do it without the bang, it returns a numb
 const circle_or_square = (rad, area) => 6.28 * rad > Math.sqrt(area) * 4
 
 //Use template literals in a template string to create the following phrase with these variables:
-const  format = (a, b, c) =>`Their names were: ${a}, ${b} and ${c}.`
+const format = (a, b, c) => `Their names were: ${a}, ${b} and ${c}.`
 
 //You will need to write three unfinished logic gates. Continue to write the three logic gates: AND, OR, and NOT.
-const NOT = (n) =>	n == 1 ? 0 : 1
-const AND = (a, b) =>	a == b ? a : 0
+const NOT = (n) => n == 1 ? 0 : 1
+const AND = (a, b) => a == b ? a : 0
 const OR = (a, b) => a == 1 || b == 1 ? 1 : 0
 //or
 const NOT = n => n ^= 1;
 const AND = (a, b) => a & b;
 const OR = (a, b) => a | b;
 //or
-const NOT = n => !n%2; //or n => +!n
+const NOT = n => !n % 2; //or n => +!n
 const AND = (a, b) => a && b;
 const OR = (a, b) => a || b;
+
+// A strong Scottish accent makes every vowel similar to an "e", so you should replace every vowel with an "e". Additionally, it is being screamed, so it should be in block capitals.
+// Create a function that takes a string and returns a string.
+const toScottishScreaming = str => str.replace(/a|i|o|u/gi, "e").toUpperCase()
+
+// Write a function that takes an array of drinks and returns an array of only drinks with no sugar in them. Drinks that contain sugar (in this challenge) are cola and fanta.
+const skipTooMuchSugarDrinks = drinks => drinks.filter(drink => drink !== "cola" && drink !== "fanta")
+
+//Create a function which returns the total of all odd numbers up to and including n. n will be given as an odd number.
+const addOddToN = n => Math.pow(((n + 1) / 2), 2)
