@@ -1186,3 +1186,27 @@ const addOddToN = n => Math.pow(((n + 1) / 2), 2)
 
 //Beans make Joker Persona 5 fart a lot. You can determine how hard he farts by how many beans he has eaten. The strength of the fart is equal to twice the square of the bean count plus 5 times the bean count, plus 3.
 const fart = beans => Math.pow(beans, 2) * 2 + beans * 5 + 3
+
+//Help fix all the bugs in the function incrementItems! It is intended to add 1 to every element in the array!
+function incrementItems(arr) {
+	let newArr = []
+	for (let i = 0; i < arr.length; i++){
+		newArr.push(arr[i] + 1)
+}
+	return newArr
+}
+//or
+function incrementItems(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		arr[i]++
+	}
+	return arr
+}
+//or
+function incrementItems(arr) {
+	for (let i = 0; i < arr.length; i++)
+		arr[i] = arr[i] + 1
+	return arr
+}
+
+
