@@ -1183,3 +1183,6 @@ const skipTooMuchSugarDrinks = drinks => drinks.filter(drink => drink !== "cola"
 
 //Create a function which returns the total of all odd numbers up to and including n. n will be given as an odd number.
 const addOddToN = n => Math.pow(((n + 1) / 2), 2)
+
+//Beans make Joker Persona 5 fart a lot. You can determine how hard he farts by how many beans he has eaten. The strength of the fart is equal to twice the square of the bean count plus 5 times the bean count, plus 3.
+const fart = beans => Math.pow(beans, 2) * 2 + beans * 5 + 3
