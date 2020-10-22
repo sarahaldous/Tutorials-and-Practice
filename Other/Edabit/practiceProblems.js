@@ -1278,3 +1278,10 @@ function addOddToN(n) {
 }
 //or
 const addOddToN = n => Math.pow((n + 1)/2, 2)
+
+Create a function which returns the length of a string, WITHOUT using String.length property.
+const length = s => [...s].reduce(a => a+1, 0);
+//or
+function length(s) {
+	return s.lastIndexOf('');
+}
