@@ -1190,9 +1190,9 @@ const fart = beans => Math.pow(beans, 2) * 2 + beans * 5 + 3
 //Help fix all the bugs in the function incrementItems! It is intended to add 1 to every element in the array!
 function incrementItems(arr) {
 	let newArr = []
-	for (let i = 0; i < arr.length; i++){
+	for (let i = 0; i < arr.length; i++) {
 		newArr.push(arr[i] + 1)
-}
+	}
 	return newArr
 }
 //or
@@ -1211,43 +1211,43 @@ function incrementItems(arr) {
 
 // /Create a function that returns a number, based on the string provided. All numbers are single digits.
 function word(s) {
-	switch(s) {
+	switch (s) {
 		case "one":
 			return 1
 			break;
 		case "two":
 			return 2
-			break;	
+			break;
 		case "three":
 			return 3
-			break;	
+			break;
 		case "four":
 			return 4
-			break;	
+			break;
 		case "five":
 			return 5
-			break;	
+			break;
 		case "six":
 			return 6
 			break;
 		case "seven":
 			return 7
-			break;	
+			break;
 		case "eight":
 			return 8
-			break;	
+			break;
 		case "nine":
 			return 9
-			break;	
+			break;
 		case "zero":
 			return 0
-			break;	
+			break;
 	}
 }
 //or
-word = s => ["zero","one","two","three","four","five","six","seven","eight","nine"].indexOf(s)
+word = s => ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"].indexOf(s)
 //or
-const word = n => ({zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9})[n];
+const word = n => ({ zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9 })[n];
 
 //Simple OOP Calculator
 class Calculator {
@@ -1274,14 +1274,29 @@ class Calculator {
 
 //Create a function which returns the total of all odd numbers up to and including n. n will be given as an odd number.
 function addOddToN(n) {
-	return Math.pow(((n + 1)/2), 2)
+	return Math.pow(((n + 1) / 2), 2)
 }
 //or
-const addOddToN = n => Math.pow((n + 1)/2, 2)
+const addOddToN = n => Math.pow((n + 1) / 2, 2)
 
 Create a function which returns the length of a string, WITHOUT using String.length property.
-const length = s => [...s].reduce(a => a+1, 0);
+const length = s => [...s].reduce(a => a + 1, 0);
 //or
 function length(s) {
 	return s.lastIndexOf('');
+}
+
+//Create a function that will put the first argument, a character, between every word in the second argument, a string.
+//Examples
+function add(char, str) {
+	const regex = / /gi
+	return str.replace(regex, char)
+}
+//or, slightly more streamlined:
+function add(char, txt) {
+	return txt.replace(/ /g, char)
+}
+//or
+function add(char, txt) {
+	return txt.split(' ').join(char)
 }
