@@ -1300,3 +1300,19 @@ function add(char, txt) {
 function add(char, txt) {
 	return txt.split(' ').join(char)
 }
+
+//Create a function that determines if the temp of the water is considered boiling or not. temp will be measured in fahrenheit and celsius.
+function isBoiling(temp) {
+	if (temp.endsWith("F") && parseInt(temp) >= 212){
+		return true
+	} else if (temp.endsWith("C") && parseInt(temp)>= 100){
+		return true
+	} else {
+		return false
+	}
+}
+//or
+const isBoiling = temp => (temp.endsWith("F") && parseInt(temp) >= 212) 
+	|| (temp.endsWith("C") && parseInt(temp)>= 100) ? true : false
+//or 
+const isBoiling = temp => ( temp >= "100C" || temp >= "212F") ? true : false
