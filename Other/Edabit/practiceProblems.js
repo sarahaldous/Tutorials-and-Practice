@@ -1316,3 +1316,12 @@ const isBoiling = temp => (temp.endsWith("F") && parseInt(temp) >= 212)
 	|| (temp.endsWith("C") && parseInt(temp)>= 100) ? true : false
 //or 
 const isBoiling = temp => ( temp >= "100C" || temp >= "212F") ? true : false
+
+//Create a function that takes a string and returns a string with its letters in alphabetical order.
+function AlphabetSoup(str) {
+	let arr = str.split('')
+	return arr.sort().join('') 
+}
+//or, much more elegant:
+const AlphabetSoup = str => str.split('').sort().join('')
+
